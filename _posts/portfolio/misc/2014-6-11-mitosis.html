@@ -1,0 +1,227 @@
+---
+layout: post
+title: CSS Mitosis
+date: 2014-6-11
+categories: Misc Code
+rgb: [237,23,79]
+caption: CSS-powered Mitosis Animation.
+image: /assets/works/mitosis.gif
+show: true
+---
+
+<style>
+#mitosis_wrap {
+  position:fixed!important;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+}
+
+.hello {
+  width:200px;
+  height:200px;
+  position:relative;
+  margin: 0 auto;
+  margin-top:100px;
+}
+
+.hello > div {
+  position:absolute;
+  overflow:hidden;
+  width:100%;
+  height:100%;
+}
+
+.hello > div > div {
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  background-color:#FFF;
+  position:relative;
+}
+
+.hello > div > div > div {
+	background-color:rgb(26, 148, 198);
+	width:100px;
+	height:100px;
+	position:relative;
+	left:50px;
+	top:50px;
+	border-radius:50%;
+	opacity:0.5;
+	overflow:visible;
+}
+
+.hello > div > div > div > div {
+	background-color:rgb(26, 148, 198);
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+}
+
+
+.left { margin-left:-50%; }
+.right { margin-left:50%; }
+
+.left > div { left:50%; }
+.right > div { right:50%; }
+
+.heading {
+  text-align:center;
+  color:#FFF;
+  font-weight:bold;
+  padding-top:30px;
+  padding-bottom:30px;
+  font-size:200%;
+  opacity:0;
+  position:absolute;
+  left:0;
+  right:0;
+}
+
+.info {
+	position: fixed;
+	top: 60px;
+	right: -5px;
+	font-size: 20px;
+	transform: rotate(90deg);
+  color:#FFF;
+}
+
+.info > span:after {
+  display: inline;
+  position: relative;
+  margin-left: 15px;
+  content: "\2192";
+  animation-fill-mode: both;
+  animation: shake 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+	0%, 100% {
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	10%, 30%, 50%, 70%, 90% {
+		-webkit-transform: translateX(-10px);
+		-ms-transform: translateX(-10px);
+		transform: translateX(-10px);
+	}
+
+	20%, 40%, 60%, 80% {
+		-webkit-transform: translateX(10px);
+		-ms-transform: translateX(10px);
+		transform: translateX(10px);
+	}
+}
+</style>
+
+<div id="mitosis_wrap"
+	data0="background-color: rgb(26, 148, 198);"
+	data5000="background-color: rgb(237, 23, 79);">
+		<div class="hello"
+			data0="width:200px;height:200px;"
+			data500="width:300px;height:300px;"
+			data4000="width:300px;height:300px;"
+			data4500="width:200px;height:200px;">
+			<div class="left"
+				data4500="transform:translateX(0px);"
+				data5000="transform:translateX(-50px);">
+				<div data4000="left:50%" data4500="left:0;">
+					<div
+						data0="background-color:rgba(26, 148, 198,1);width:100px;height:100px;left:50px;top:50px;"
+						data500="background-color:rgba(47,135,186,1);width:100px;height:100px;left:100px;top:100px;"
+						data2000="background-color:rgba(110,98,150,1);width:150px;height:150px;left:75px;top:75px;"
+						data2500="background-color:rgba(132,85,139,0)"
+						data4000="background-color:rgba(195,48,103,0);width:150px;height:150px;left:75px;top:75px;"
+						data4500="background-color:rgba(216,36,91,1);width:100px;height:100px;left:50px;top:50px;"
+						data5000="background-color:rgba(237,23,79,1);">
+						<div
+							data0="transform:translateX(0px) translateY(0px);background-color:rgb(26,148,198);"
+							data500="transform:translateX(0px) translateY(0px);background-color:rgb(47,135,186);"
+							data2500="transform:translateX(0px) translateY(-50px);background-color:rgb(132,85,139);"
+							data3000="transform:translateX(0px) translateY(-75px);background-color:rgb(153,73,127);"
+							data4000="transform:translateX(-50px) translateY(0px);background-color:rgb(195,48,103);"
+							data4500="transform:translateX(0px) translateY(0px);background-color:rgb(216,36,91);"
+							data5000="background-color:rgb(237,23,79);"></div>
+						<div
+							data0="transform:translateX(0px) translateY(0px);background-color:rgb(26,148,198);"
+							data500="transform:translateX(0px) translateY(0px);background-color:rgb(47,135,186);"
+							data2500="transform:translateX(-45px) translateY(25px);background-color:rgb(132,85,139);"
+							data3000="transform:translateX(0px) translateY(0px);background-color:rgb(153,73,127);"
+							data4000="transform:translateX(-50px) translateY(0px);background-color:rgb(195,48,103);"
+							data4500="transform:translateX(0px) translateY(0px);background-color:rgb(216,36,91);"
+							data5000="background-color:rgb(237,23,79);"></div>
+						<div
+							data0="transform:translateX(0px) translateY(0px);background-color:rgb(26,148,198);"
+							data500="transform:translateX(0px) translateY(0px);background-color:rgb(47,135,186);"
+							data2500="transform:translateX(45px) translateY(25px);background-color:rgb(132,85,139);"
+							data3000="transform:translateX(0px) translateY(75px);background-color:rgb(153,73,127);"
+							data4000="transform:translateX(-50px) translateY(0px);background-color:rgb(195,48,103);"
+							data4500="transform:translateX(0px) translateY(0px);background-color:rgb(216,36,91);"
+							data5000="background-color:rgb(237,23,79);"></div>
+					</div>
+				</div>
+			</div>
+			<div class="right"
+				data4500="transform:translateX(0px);"
+				data5000="transform:translateX(50px);">
+				<div data4000="right:50%" data4500="right:0;">
+					<div
+						data0="background-color:rgba(26, 148, 198,1);width:100px;height:100px;left:50px;top:50px;"
+						data500="background-color:rgba(47,135,186,1);width:100px;height:100px;left:100px;top:100px;"
+						data2000="background-color:rgba(110,98,150,1);width:150px;height:150px;left:75px;top:75px;"
+						data2500="background-color:rgba(132,85,139,0)"
+						data4000="background-color:rgba(195,48,103,0);width:150px;height:150px;left:75px;top:75px;"
+						data4500="background-color:rgba(216,36,91,1);width:100px;height:100px;left:50px;top:50px;"
+						data5000="background-color:rgba(237,23,79,1);">
+						<div
+							data0="transform:translateX(0px) translateY(0px);background-color:rgb(26,148,198);"
+							data500="transform:translateX(0px) translateY(0px);background-color:rgb(47,135,186);"
+							data2500="transform:translateX(0px) translateY(-50px);background-color:rgb(132,85,139);"
+							data3000="transform:translateX(0px) translateY(-75px);background-color:rgb(153,73,127);"
+							data4000="transform:translateX(50px) translateY(0px);background-color:rgb(195,48,103);"
+							data4500="transform:translateX(0px) translateY(0px);background-color:rgb(216,36,91);"
+							data5000="background-color:rgb(237,23,79);"></div>
+						<div
+							data0="transform:translateX(0px) translateY(0px);background-color:rgb(26,148,198);"
+							data500="transform:translateX(0px) translateY(0px);background-color:rgb(47,135,186);"
+							data2500="transform:translateX(-45px) translateY(25px);background-color:rgb(132,85,139);"
+							data3000="transform:translateX(0px) translateY(0px);background-color:rgb(153,73,127);"
+							data4000="transform:translateX(50px) translateY(0px);background-color:rgb(195,48,103);"
+							data4500="transform:translateX(0px) translateY(0px);background-color:rgb(216,36,91);"
+							data5000="background-color:rgb(237,23,79);"></div>
+						<div
+							data0="transform:translateX(0px) translateY(0px);background-color:rgb(26,148,198);"
+							data500="transform:translateX(0px) translateY(0px);background-color:rgb(47,135,186);"
+							data2500="transform:translateX(45px) translateY(25px);background-color:rgb(132,85,139);"
+							data3000="transform:translateX(0px) translateY(75px);background-color:rgb(153,73,127);"
+							data4000="transform:translateX(50px) translateY(0px);background-color:rgb(195,48,103);"
+							data4500="transform:translateX(0px) translateY(0px);background-color:rgb(216,36,91);"
+							data5000="background-color:rgb(237,23,79);"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="heading" data0="opacity:0;display:block;" data100="opacity:1;display:block;" data1950="opacity:1;display:block;" data2000="opacity:0;display:none;">Interphase</div>
+		<div class="heading" data2000="opacity:0;display:block;" data2050="opacity:1;display:block;" data2450="opacity:1;display:block;" data2500="opacity:0;display:none;">Prophase</div>
+		<div class="heading" data2500="opacity:0;display:block;" data2550="opacity:1;display:block;" data2950="opacity:1;display:block;" data3000="opacity:0;display:none;">Metaphase</div>
+		<div class="heading" data3000="opacity:0;display:block;" data3050="opacity:1;display:block;" data3950="opacity:1;display:block;" data4000="opacity:0;display:none;">Anaphase</div>
+		<div class="heading" data4000="opacity:0;display:block;" data4050="opacity:1;display:block;" data4450="opacity:1;display:block;" data4500="opacity:0;display:none;">Telophase</div>
+		<div class="heading" data4500="opacity:0;display:block;" data4550="opacity:1;display:block;" data4950="opacity:1;display:block;" data5000="opacity:0;display:none;">Cytokinesis</div>
+		<div class="heading" style="font-size:300%" data5000="opacity:0;display:block;transform: scale(.5);" data5250="opacity:1;display:block;transform: scale(1.25);" data5500="transform: scale(1);">CSS Mitosis</div>
+		<div class="info"><span>Scroll</span></div>
+	<script src="http://demo.capiche.co.nz/sticker/lib/bower_components/skrollr/dist/skrollr.min.js"></script>
+</div>
+
+<script>skrollr.init();</script>

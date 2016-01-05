@@ -1,0 +1,140 @@
+---
+layout: post
+title: Sine Wave
+date: 2015-4-28
+categories: Misc Code
+rgb: [32,214,154]
+caption: Javascript Animation of a Sine Wave
+image: /assets/works/sine.gif
+show: true
+---
+
+<style>
+
+#sineWaveModule {
+	padding:0px;
+	max-width:1440px;
+	margin:0 auto;
+	position:absolute;top:0;left:0;right:0;bottom:0;
+	overflow:hidden;
+}
+
+#sineWaveModule * {
+	line-height:1.4em;
+    transition-property: margin, height, width, padding, opacity, background-color, border-radius, border;
+    transition-duration: 0s;
+    transition-timing-function: none;
+}
+
+#sineWaveModule > ul > li {
+	display:block;
+	float:left;
+	width:10%;
+	margin:0.55555555%;
+	height:50px;
+	border-radius:50%;
+	background-size:cover;
+	background-position:center;
+	/*box-shadow:0 2px 5px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.05);*/
+	position:relative;
+}
+
+#hue1 { background-image:url("/assets/projects/yb2015/sine/phue1.png") }
+#hue2 { background-image:url("/assets/projects/yb2015/sine/phue2.png") }
+#hue3 { background-image:url("/assets/projects/yb2015/sine/phue3.png") }
+#hue4 { background-image:url("/assets/projects/yb2015/sine/phue4.png") }
+#hue5 { background-image:url("/assets/projects/yb2015/sine/phue5.png") }
+#hue6 { background-image:url("/assets/projects/yb2015/sine/phue6.png") }
+#hue7 { background-image:url("/assets/projects/yb2015/sine/phue7.png") }
+#hue8 { background-image:url("/assets/projects/yb2015/sine/phue8.png") }
+#hue9 { background-image:url("/assets/projects/yb2015/sine/phue9.png") }
+
+#sineWaveTitle {
+	background-color:rgba(255,255,255,0.7);
+	padding:15px 20px;
+	text-align:center;
+	font-family:"Futura STD";
+	width:15%;
+	overflow:hidden;
+	position:relative;
+	z-index:100;
+	float:right;
+	right:7.6%;
+	display:none;
+}
+
+#sineWaveTitle > span { display:block;}
+
+</style>
+
+<div id="sineWaveModule">
+	<ul>
+		<li id="hue1"></li>
+		<li id="hue2"></li>
+		<li id="hue3"></li>
+		<li id="hue4"></li>
+		<li id="hue5"></li>
+		<li id="hue6"></li>
+		<li id="hue7"></li>
+		<li id="hue8"></li>
+		<li id="hue9"></li>
+	</ul>
+	<div id="sineWaveTitle">
+		<span style="font-size:200%;font-weight:700;">LEGEND</span>
+		<span style="font-size:170%;line-height:80%;margin-top:3px;font-weight:300">2014-2015</span>
+		<span style="font-size:120%;letter-spacing:3px;margin-top:6px;font-weight:500">LELAND HIGH SCHOOL</span>
+	</div>
+</div>
+
+<section style="position:absolute;top:100%;left:0;right:0;">
+	<div class="s-pad bottom" style="background-color:#EEE">
+		<h1 class="title-padding">Sine Wave</h1>
+		<div class="content">
+			<p>Since the 2015 yearbook's main motif is the gradient, I designed the opening page experimentally. Originally, the page featured a brick wall of circular gradients, however I ran out of gradients (there's only so many colors that can match together!), and picked nine gradients that followed along a rainbow. I overlayed a few patterns, and arranged the circles along a sine wave.</p>
+			<p>We chose the sine wave because we were just learning about oscillation in AP Physics. After designing the page, I thought it would be interesting to animate my design. And thus, I pulled out my Moleskine and began to work out the exact period and amplitude in mathematical terms. I converted that into code, and it worked flawlessly.</p>
+			<p>At first, the oscillation looked very stiff. I knew it was because the circles were shifting up and down, linearly. It moved unnaturally—inorganically. In order to create the tilt, I had to find the slope at each point. Easy: take the derivative. One line of code later, and the tilt was born. Math is simply magical.</p>
+		</div>
+	</div>
+</section>
+
+
+<script>
+swm = document.getElementById("sineWaveModule"),
+swb = swm.getElementsByTagName("li"); // swb = object of ball elements
+
+// changes size of ball depending on width of window
+function bsize(){ 
+	for (var i = 0; i < swb.length ; i++ ){
+		swb[i].style.height = window.getComputedStyle(swb[i]).getPropertyValue('width');
+	}
+} document.onLoad = bsize(); window.addEventListener("resize", bsize); // execute
+
+last_update = Date.now();
+x_delta = 0;
+function frame() {
+	var now = Date.now();
+	var time_delta = now - last_update;
+	x_delta += time_delta / 500;
+	for (var i = 0; i < swb.length ; i++) {
+		sin = Math.sin((i+1)*Math.PI/6 + x_delta);
+		cos = Math.PI/6 * Math.cos((i+1)*Math.PI/6 + x_delta); // y'(pi) >> slope
+		amp = (parseInt( window.getComputedStyle(swb[i]).getPropertyValue('width'), 10 )/1.2 );
+		y_delta = window.innerHeight*0.5;
+		swb[i].style.top = ( sin * amp + y_delta ) + "px"; // y = sin(x*pi/6 + x_delta) * (ballwidth/1.2) + y_delta >> animation
+		swb[i].style.transform = "rotate("+(cos*180/Math.PI)+"deg)"; // rotation
+		swb[i].style["-webkit-transform"] = "rotate("+(cos*180/Math.PI)+"deg)"; // rotation
+	}
+	last_update = now;
+}
+
+(function _ (){
+	frame();
+	requestAnimationFrame(_);
+})();
+
+
+document.getElementById("sineWaveTitle").style.top = window.innerHeight*0.45 + "px"; // location of title
+
+// created by Andrew
+// optimized by Shaheen
+</script>

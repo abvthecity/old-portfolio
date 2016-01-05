@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<main>
+  <section>
+    <div class="s-pad bottom s-tile">
+      <h1 class="title-padding">{% if page.category.size > 1 %}<span style="color:#AAA"><a href="/{{ page.category[0] }}">{{ page.category[0] }}</a> / </span>{% endif %}{{page.title}}</h1>
+
+{% if page.sub.size > 0 %}
+<center>{% for each in page.sub %}
+  <a href="/{{ page.category | join '/' }}/{{ each | downcase }}" class="sub">{{ each | capitalize }}</a>
+{% endfor %}</center>
+
+</div>
+<div class="s-pad bottom s-tile">
+{% endif %}
+
+<ul class="tile_ul">
+{% for post in site.posts %}{% if post.show == true and page.category == post.categories or post.categories.first == page.category.last %}{% assign _r = post.rgb[0] | times: 0.299 | divided_by: 256 %}{% assign _g = post.rgb[1] | times: 0.587 | divided_by: 256 %}{% assign _b = post.rgb[2] | times: 0.114 | divided_by: 256 %}{% assign _rgb = _r | plus: _g | plus: _b %}
+<li class="tile{% if _rgb < 0.55 %} dk{% endif %}">
+  <a href="{{ post.url | prepend: site.baseurl }}">
+    <figure>
+      <img alt="" src="{{ post.image }}">
+      <figcaption style="background-color:rgba({{ post.rgb | join: ',' }},0.8)">
+        <b>{{ post.title }}</b>
+        {% if post.caption %}<p>{{post.caption}}</p> {% endif %}
+      </figcaption>
+    </figure>
+  </a>
+</li>
+{% endif %}{% endfor %}
+</ul>
+
+    </div>
+  </section>
+</main>
+
+<script>
+function tileSize(){ 
+  for (i = 0; i < document.getElementsByClassName("tile").length ; i++ ){
+    document.getElementsByClassName("tile")[i].style.height = window.getComputedStyle(document.getElementsByClassName("tile")[i]).getPropertyValue('width');
+  }
+} document.onLoad = tileSize(); window.addEventListener("resize", tileSize); // execute
+</script>

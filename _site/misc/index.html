@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <title>Miscellaneous</title>
+  <meta name="description" content="Andrew's Portfolio">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://use.typekit.net/tgi3xpz.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+  <link rel="canonical" href="http://andrewjiang.com/misc/">
+  
+
+</head>
+<body>
+
+<header class="site-header">
+
+<nav >
+  <ul>
+    <li><a href="/" data-title="Andrew Jiang">Andrew Jiang</a></li>
+    <li><a href="/hello" data-title="Hello">Hello</a>
+      <ul><li><a href="/hello/resume"><b>Résumé</b> (pdf)</a></li><li><a href="/hello/email">Email me</a></li><li><a href="/hello/linkedin">LinkedIn</a></li><li><a href="/hello/twitter">Twitter</a></li></ul>
+    </li>
+    
+    <li><a href="/code" data-title="code">Code</a>
+      <ul><li><a href="/code/games/epicflyer"><span>games / </span>Epic Flyer</a></li><li><a href="/misc"><b>See more...</b></a></li>
+      </ul>
+    </li>
+    
+    <li><a href="/design" data-title="design">Design</a>
+      <ul><li><a href="/design/print/portfolio2015"><span>print / </span>Portfolio 2015</a></li><li><a href="/design/print/yb2015"><span>print / </span>Lost in the World</a></li><li><a href="/design/web/journo"><span>web / </span>Charger Account</a></li><li><a href="/design/web/paradata"><span>web / </span>Paradata Portal</a></li><li><a href="/misc"><b>See more...</b></a></li>
+      </ul>
+    </li>
+    
+    <li><a href="/misc" data-title="misc" class="sel">Misc</a>
+      <ul><li><a href="/misc/code/sinewave"><span>code / </span>Sine Wave</a></li><li><a href="/misc/code/geoflower"><span>code / </span>Geometric Flower</a></li><li><a href="/misc/photo/vsco"><span>photo / </span>VSCO Grid</a></li><li><a href="/misc/code/mitosis"><span>code / </span>CSS Mitosis</a></li><li><a href="/misc"><b>See more...</b></a></li>
+      </ul>
+    </li>
+    
+
+    <li><a href="/hello/github" data-title="Github">Github</a></li>
+  </ul>
+</nav>
+
+</header>
+
+
+<main>
+  <section>
+    <div class="s-pad bottom s-tile">
+      <h1 class="title-padding">Miscellaneous</h1>
+
+
+<center>
+  <a href="/misc/art" class="sub">Art</a>
+
+  <a href="/misc/photo" class="sub">Photo</a>
+
+  <a href="/misc/code" class="sub">Code</a>
+</center>
+
+</div>
+<div class="s-pad bottom s-tile">
+
+
+<ul class="tile_ul">
+
+<li class="tile">
+  <a href="/misc/code/sinewave">
+    <figure>
+      <img alt="" src="/assets/works/sine.gif">
+      <figcaption style="background-color:rgba(32,214,154,0.8)">
+        <b>Sine Wave</b>
+        <p>Javascript Animation of a Sine Wave</p> 
+      </figcaption>
+    </figure>
+  </a>
+</li>
+
+<li class="tile dk">
+  <a href="/misc/code/geoflower">
+    <figure>
+      <img alt="" src="/assets/works/tree.jpg">
+      <figcaption style="background-color:rgba(112,73,18,0.8)">
+        <b>Geometric Flower</b>
+        <p>Javascript Canvas animation of a regression flower branching into other shapes.</p> 
+      </figcaption>
+    </figure>
+  </a>
+</li>
+
+<li class="tile dk">
+  <a href="/misc/photo/vsco">
+    <figure>
+      <img alt="" src="/assets/works/9.jpg">
+      <figcaption style="background-color:rgba(158,112,46,0.8)">
+        <b>VSCO Grid</b>
+        <p>iPhone Photography. <br>Ocassionally Updated.</p> 
+      </figcaption>
+    </figure>
+  </a>
+</li>
+
+<li class="tile dk">
+  <a href="/misc/code/mitosis">
+    <figure>
+      <img alt="" src="/assets/works/mitosis.gif">
+      <figcaption style="background-color:rgba(237,23,79,0.8)">
+        <b>CSS Mitosis</b>
+        <p>CSS-powered Mitosis Animation.</p> 
+      </figcaption>
+    </figure>
+  </a>
+</li>
+
+<li class="tile dk">
+  <a href="/misc/art/sketches">
+    <figure>
+      <img alt="" src="/assets/works/sketches.jpg">
+      <figcaption style="background-color:rgba(80,80,80,0.8)">
+        <b>Portraits</b>
+        
+      </figcaption>
+    </figure>
+  </a>
+</li>
+
+</ul>
+
+    </div>
+  </section>
+</main>
+
+<script>
+function tileSize(){ 
+  for (i = 0; i < document.getElementsByClassName("tile").length ; i++ ){
+    document.getElementsByClassName("tile")[i].style.height = window.getComputedStyle(document.getElementsByClassName("tile")[i]).getPropertyValue('width');
+  }
+} document.onLoad = tileSize(); window.addEventListener("resize", tileSize); // execute
+</script>
+
+
+
+</body> 
+</html>

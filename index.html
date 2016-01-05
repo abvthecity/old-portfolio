@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<main>
+  <section>
+    <div class="s-pad bottom s-tile">
+
+<ul class="tile_ul">
+<li class="tile nohov">
+  <div onclick="javascript:window.open('/hello','_self');">
+    <figure>
+      <figcaption class="show" style="background-color:#FFF;cursor:pointer;border:2px dashed #AAA">
+        <b style="color:rgb(52,136,182)">Hello, I'm Andrew.</b>
+        <p class="show">Code + Design<br><strong>University of Southern California</strong></p>
+        <a href="/hello/resume" class="sub">Résumé</a><a href="/hello/email" class="sub">Email Me</a>
+      </figcaption>
+    </figure>
+  </div>
+</li>
+{% for post in site.posts %}{% if post.show == true %}{% assign _r = post.rgb[0] | times: 0.299 | divided_by: 256 %}{% assign _g = post.rgb[1] | times: 0.587 | divided_by: 256 %}{% assign _b = post.rgb[2] | times: 0.114 | divided_by: 256 %}{% assign _rgb = _r | plus: _g | plus: _b %}
+<li class="tile{% if _rgb < 0.55 %} dk{% endif %}">
+  <a href="{{ post.url | prepend: site.baseurl }}">
+    <figure>
+      <img alt="" src="{{ post.image }}">
+      <figcaption style="background-color:rgba({{ post.rgb | join: ',' }},0.8)">
+        <b>{{ post.title }}</b>
+        {% if post.caption %}<p>{{post.caption}}</p> {% endif %}
+      </figcaption>
+    </figure>
+  </a>
+</li>
+{% endif %}{% endfor %}
+</ul>
+
+    </div>
+  </section>
+</main>
+
+<script>
+function tileSize(){ 
+  for (i = 0; i < document.getElementsByClassName("tile").length ; i++ ){
+    document.getElementsByClassName("tile")[i].style.height = window.getComputedStyle(document.getElementsByClassName("tile")[i]).getPropertyValue('width');
+  }
+} document.onLoad = tileSize(); window.addEventListener("resize", tileSize); // execute
+</script>

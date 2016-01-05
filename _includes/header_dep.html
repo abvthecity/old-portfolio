@@ -1,0 +1,17 @@
+<header class="site-header">
+
+<nav {{page.nav}}>
+  <ul>
+    <li><a href="/" data-title="Andrew Jiang" {% if page.url == "/index.html" %}class="sel"{% endif %}>Andrew Jiang</a></li>
+    <li><a href="/hello" data-title="Hello">Hello</a></li>
+    <li><a href="/resume" data-title="Résumé">Résumé</a></li>
+    <li><a href="/work" data-titel="Work">Work</a>
+    <ul>{% for category in site.categories %}
+      <li><a href="/{{ category | first}}">{{ category | first }}</a></li>
+    {% endfor %}</ul>
+    <li><a href="http://blog.andrewjiang.com/" data-title="Blog">Blog</a></li>
+    <li><a href="http://github.com/ninjiangstar" data-title="Github">Github</a></li>
+  </ul>
+</nav>
+
+</header>

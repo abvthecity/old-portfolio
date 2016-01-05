@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <title>Web</title>
+  <meta name="description" content="Andrew's Portfolio">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://use.typekit.net/tgi3xpz.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+  <link rel="canonical" href="http://andrewjiang.com/design/web/">
+  
+
+</head>
+<body>
+
+<header class="site-header">
+
+<nav >
+  <ul>
+    <li><a href="/" data-title="Andrew Jiang">Andrew Jiang</a></li>
+    <li><a href="/hello" data-title="Hello">Hello</a>
+      <ul><li><a href="/hello/resume"><b>Résumé</b> (pdf)</a></li><li><a href="/hello/email">Email me</a></li><li><a href="/hello/linkedin">LinkedIn</a></li><li><a href="/hello/twitter">Twitter</a></li></ul>
+    </li>
+    
+    <li><a href="/code" data-title="code">Code</a>
+      <ul><li><a href="/code/games/epicflyer"><span>games / </span>Epic Flyer</a></li><li><a href="/design"><b>See more...</b></a></li>
+      </ul>
+    </li>
+    
+    <li><a href="/design" data-title="design" class="sel">Design</a>
+      <ul><li><a href="/design/print/portfolio2015"><span>print / </span>Portfolio 2015</a></li><li><a href="/design/print/yb2015"><span>print / </span>Lost in the World</a></li><li><a href="/design/web/journo"><span>web / </span>Charger Account</a></li><li><a href="/design/web/paradata"><span>web / </span>Paradata Portal</a></li><li><a href="/design"><b>See more...</b></a></li>
+      </ul>
+    </li>
+    
+    <li><a href="/misc" data-title="misc">Misc</a>
+      <ul><li><a href="/misc/code/sinewave"><span>code / </span>Sine Wave</a></li><li><a href="/misc/code/geoflower"><span>code / </span>Geometric Flower</a></li><li><a href="/misc/photo/vsco"><span>photo / </span>VSCO Grid</a></li><li><a href="/misc/code/mitosis"><span>code / </span>CSS Mitosis</a></li><li><a href="/design"><b>See more...</b></a></li>
+      </ul>
+    </li>
+    
+
+    <li><a href="/hello/github" data-title="Github">Github</a></li>
+  </ul>
+</nav>
+
+</header>
+
+
+<main>
+  <section>
+    <div class="s-pad bottom s-tile">
+      <h1 class="title-padding"><span style="color:#AAA"><a href="/design">design</a> / </span>Web</h1>
+
+
+
+<ul class="tile_ul">
+
+<li class="tile dk">
+  <a href="/design/web/journo">
+    <figure>
+      <img alt="" src="/assets/works/7.jpg">
+      <figcaption style="background-color:rgba(198,29,127,0.8)">
+        <b>Charger Account</b>
+        <p>Leland High School's official online newspaper.</p> 
+      </figcaption>
+    </figure>
+  </a>
+</li>
+
+<li class="tile dk">
+  <a href="/design/web/paradata">
+    <figure>
+      <img alt="" src="/assets/works/8.jpg">
+      <figcaption style="background-color:rgba(44,85,239,0.8)">
+        <b>Paradata Portal</b>
+        <p>User experience redesign of database portal using Material Design.</p> 
+      </figcaption>
+    </figure>
+  </a>
+</li>
+
+<li class="tile">
+  <a href="/design/web/sfl">
+    <figure>
+      <img alt="" src="/assets/works/4.jpg">
+      <figcaption style="background-color:rgba(111,198,28,0.8)">
+        <b>Speak For Life</b>
+        <p>Promoting the importance of speech. Website, branding, etc.</p> 
+      </figcaption>
+    </figure>
+  </a>
+</li>
+
+<li class="tile">
+  <a href="/design/web/robotics">
+    <figure>
+      <img alt="" src="/assets/works/604robotics.jpg">
+      <figcaption style="background-color:rgba(251,182,19,0.8)">
+        <b>604 Robotics</b>
+        
+      </figcaption>
+    </figure>
+  </a>
+</li>
+
+<li class="tile dk">
+  <a href="/design/web/past">
+    <figure>
+      <img alt="" src="/assets/works/1.jpg">
+      <figcaption style="background-color:rgba(232,99,32,0.8)">
+        <b>Past Web Projects</b>
+        
+      </figcaption>
+    </figure>
+  </a>
+</li>
+
+</ul>
+
+    </div>
+  </section>
+</main>
+
+<script>
+function tileSize(){ 
+  for (i = 0; i < document.getElementsByClassName("tile").length ; i++ ){
+    document.getElementsByClassName("tile")[i].style.height = window.getComputedStyle(document.getElementsByClassName("tile")[i]).getPropertyValue('width');
+  }
+} document.onLoad = tileSize(); window.addEventListener("resize", tileSize); // execute
+</script>
+
+
+
+</body> 
+</html>
