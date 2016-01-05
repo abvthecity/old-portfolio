@@ -710,9 +710,10 @@ a.sub {
   text-decoration: none;
   font-size: 24px;
   line-height: 1em;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-right: 16px;
   text-transform: uppercase; }
+  a.sub:last-of-type {
+    margin-right: 0; }
   a.sub:hover {
     color: #FFF;
     background-color: #E85676; }
