@@ -3,17 +3,17 @@
 <nav {{page.nav}}>
   <ul>
     <li><a href="/" data-title="Andrew Jiang"{% if page.path == 'index.html' %} class="sel"{% endif %}>Andrew Jiang</a></li>
-    <li><a href="/hello" data-title="Hello"{% if page.categories.first == 'hello' or page.category == 'hello' or page.category[0] == 'hello' %} class="sel"{% endif %}>Hello</a>
-      <ul><li><a href="/hello/resume"><b>Résumé</b> (pdf)</a></li><li><a href="/hello/email">Email me</a></li><li><a href="/hello/linkedin">LinkedIn</a></li><li><a href="/hello/twitter">Twitter</a></li></ul>
+    <li><a href="/hello/resume" target="_blank" data-title="Résumé"{% if page.categories.first == 'hello' or page.category == 'hello' or page.category[0] == 'hello' %} class="sel"{% endif %}>Résumé</a>
+      <ul><li><a href="/hello">About</a></li><li><a href="/hello/email" target="_blank">Email me</a></li><li><a href="/hello/linkedin" target="_blank">LinkedIn</a></li><li><a href="/hello/twitter" target="_blank">Twitter</a></li></ul>
     </li>
     {% for cat in site.nav %}{% assign _cat = cat | downcase %}
     <li><a href="/{{ cat | downcase }}" data-title="{{ cat | downcase }}"{% if page.categories.first == _cat or page.category == _cat or page.category[0] == _cat %} class="sel"{% endif %}>{{ cat }}</a>
-      <ul>{% assign index = 0 %}{% for post in site.categories[_cat] %}{% if post.categories[0] == _cat %}{% if index > 3 %}{% break %}{% endif %}<li><a href="{{ post.url }}">{% if post.categories.size > 1 %}<span>{{ post.categories[1]}} / </span>{% endif %}{{ post.title }}</a></li>{% assign index = index | plus: 1 %}{% endif %}{% endfor %}<li><a href="/{{ page.category | first }}"><b>See more...</b></a></li>
+      <ul>{% assign index = 0 %}{% for post in site.categories[_cat] %}{% if post.categories[0] == _cat %}{% if index > 3 %}{% break %}{% endif %}<li><a href="{{ post.url }}">{% if post.categories.size > 1 %}<span>{{ post.categories[1]}} / </span>{% endif %}{{ post.title }}</a></li>{% assign index = index | plus: 1 %}{% endif %}{% endfor %}<li><a href="/{{ _cat }}"><b>See more...</b></a></li>
       </ul>
     </li>
     {% endfor %}
 
-    <li><a href="/hello/github" data-title="Github">Github</a></li>
+    <li><a href="/hello/github" data-title="Github" target="_blank">Github</a></li>
   </ul>
 </nav>
 

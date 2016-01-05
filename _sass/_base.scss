@@ -140,7 +140,7 @@ nav {
         }
 
         > span {
-            color:#AAA;
+            color:#888;
             font-size:11px
         }
     }
@@ -255,6 +255,71 @@ section p img, footer p img {margin:0 auto;}
 
 section p.neg, footer p.neg { margin: auto -16px; }
 section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
+
+.left-image, .right-image { margin:20px!important;max-width:500px;overflow:hidden; }
+.left-image {float:left;margin-left:-200px!important;}
+.right-image {float:right;margin-right:-200px!important;}
+
+.left-image.nofloat {margin-right:0px;}
+
+.nofloat-left-pad {padding-right:20px;position:relative;left:20px;}
+
+.left-image-caption, .right-image-caption, .image-caption {
+    width:160px;
+    padding:20px;
+    overflow:hidden;
+    color:#666;
+    font-style:italic;
+    display:block;
+    padding-top:0px;
+    font-size:14px;
+}
+
+.left-image-caption  {margin-left:-200px; float:left; text-align:right;clear:left; }
+.right-image-caption {margin-right:-200px;float:right;text-align:left; clear:right;}
+
+.left-image-caption:before, .right-image-caption:before, .image-caption:before {
+    display:block;
+    content:'';
+    height:1px;
+    width:80px;
+    background-color:#AAA;
+    margin-bottom:10px;
+} 
+
+.image-caption {
+    margin:0px;
+    float:none;
+    width:auto;
+    text-align:center;
+    padding:20px 50px;
+}
+
+.image-caption:before {
+    margin:0 auto;
+    margin-bottom:10px;
+}
+
+.left-image-caption:before {margin:0 0 0 auto} 
+.right-image-caption:before {margin:0 auto 0 0}
+
+
+.right-quote {
+    float:right;
+    padding:20px;
+    padding-right:0;
+    margin-right:-200px;
+    max-width:300px;
+    overflow:hidden;
+    font-size:30px;
+    border-top:5px solid #AAA;
+    border-bottom:5px solid #AAA;
+    margin-left:20px;
+    margin-bottom:20px;
+    font-weight:bold;
+    padding-left:0px;
+    display:block;
+}
 
 /* TILES */
 
@@ -487,6 +552,8 @@ nav > ul > li > ul { display:none!important; }
 
 
 .s-pad {padding:16px 16px 0 16px;}
+
+a.sub { font-size:18px;line-height:1em;padding:12px 16px }
 
 }
 

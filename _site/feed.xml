@@ -5,8 +5,8 @@
     <description>Andrew&#39;s Portfolio</description>
     <link>http://andrewjiang.com/</link>
     <atom:link href="http://andrewjiang.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 04 Jan 2016 16:42:35 -0800</pubDate>
-    <lastBuildDate>Mon, 04 Jan 2016 16:42:35 -0800</lastBuildDate>
+    <pubDate>Mon, 04 Jan 2016 17:35:56 -0800</pubDate>
+    <lastBuildDate>Mon, 04 Jan 2016 17:35:56 -0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -61,7 +61,7 @@
         <title>Email</title>
         <description>&lt;section&gt;
 	&lt;div class=&quot;s-pad bottom&quot;&gt;
-		&lt;center&gt;&lt;a href=&quot;mailto:andrewji@usc.edu&quot; class=&quot;sub&quot;&gt;andrewji@usc.edu&lt;/a&gt;&lt;/center&gt;
+		&lt;center&gt;&lt;h1&gt;&lt;a href=&quot;mailto:andrewji@usc.edu&quot;&gt;andrewji@usc.edu&lt;/a&gt;&lt;/h1&gt;&lt;/center&gt;
 	&lt;/div&gt;
 &lt;/section&gt;</description>
         <pubDate>Fri, 17 Jul 2015 00:00:00 -0700</pubDate>
@@ -80,7 +80,7 @@
 		&lt;h1 class=&quot;title-padding&quot;&gt;Portfolio 2015&lt;/h1&gt;
 		&lt;div class=&quot;content&quot;&gt;
 			&lt;p style=&quot;text-align:center;&quot;&gt;As a final act of desperation to appeal to CMU&#39;s waitlist, I threw together a portfolio booklet and I sent it to the admissions committee. Despite the misfortune that the SCS enrollment was complete, I&#39;m left with a portfolio that represents my massive personal growth in my work throughout the past four years of high school. It is certainly a milestone that I can physically put away and embrace the next four years of growth at university.&lt;/p&gt;
-			&lt;div style=&quot;text-align:center&quot;&gt;&lt;a href=&quot;/assets/projects/portfolio/2015.pdf&quot; target=&quot;_blank&quot; class=&quot;sub&quot;&gt;Download PDF (44MB)&lt;/a&gt;&lt;/div&gt;
+			&lt;div style=&quot;text-align:center&quot;&gt;&lt;a href=&quot;https://www.dropbox.com/s/yjbrhrz02v2dyw8/portfolio_2015_print.pdf?dl=0&quot; target=&quot;_blank&quot; class=&quot;sub&quot;&gt;Download PDF (44MB)&lt;/a&gt;&lt;/div&gt;
 		
 		&lt;/div&gt;
 	&lt;/div&gt;
