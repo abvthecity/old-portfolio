@@ -5,8 +5,8 @@
     <description>Andrew&#39;s Portfolio</description>
     <link>http://andrewjiang.com/</link>
     <atom:link href="http://andrewjiang.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 06 Jan 2016 03:55:01 -0800</pubDate>
-    <lastBuildDate>Wed, 06 Jan 2016 03:55:01 -0800</lastBuildDate>
+    <pubDate>Wed, 06 Jan 2016 04:18:05 -0800</pubDate>
+    <lastBuildDate>Wed, 06 Jan 2016 04:18:05 -0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -59,6 +59,10 @@
 			&lt;h5&gt;About the Branding&lt;/h5&gt;
 			&lt;p class=&quot;sans&quot;&gt;Our director of branding, Megan Park, set the tone for this year&#39;s 1000 pitches brand assets with subtle, gridded, blueprint-esque backdrops and a focus on white lines. My task was to design a targeted marketing strategy to gain participants within underrepresented communities at USC for entreprenurship. Instead of marketing towards engineers and business students, who make up the majority of our participants, we wanted to focus on cinema, art, music, and science students. These posters make up my effort to expand upon the brand, target unique communities, and tell a hidden story within each piece.&lt;/p&gt;
 		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;s-pad content bottom&quot;&gt;
+		&lt;p class=&quot;sans&quot; style=&quot;text-align:center&quot;&gt;Designed by Andrew Jiang.&lt;/p&gt;
+		&lt;a href=&quot;http://sparksc.org&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://sparksc.org/img/logo.svg&quot; style=&quot;width:64px;&quot;&gt;&lt;/a&gt;
 	&lt;/div&gt;
 &lt;/section&gt;</description>
         <pubDate>Sat, 12 Dec 2015 00:00:00 -0800</pubDate>
@@ -208,6 +212,7 @@ ul.gal-3 &gt; li {
 	&lt;/div&gt;
 	&lt;div class=&quot;s-pad content bottom&quot;&gt;
 		&lt;p class=&quot;sans&quot; style=&quot;text-align:center&quot;&gt;Designed by Andrew Jiang.&lt;/p&gt;
+		&lt;a href=&quot;http://usclavalab.org&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://usclavalab.org/assets/images/logos/lavalab-logo-250x250.png&quot; style=&quot;width:50px;&quot;&gt;&lt;/a&gt;
 	&lt;/div&gt;
 &lt;/section&gt;</description>
         <pubDate>Thu, 10 Dec 2015 00:00:00 -0800</pubDate>
