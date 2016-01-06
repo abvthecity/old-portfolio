@@ -165,7 +165,7 @@ nav {
         > ul {
             position:absolute;
             z-index:100;
-            top:90%; left:0;
+            top:90%; left:16px;
             display:none;
             background-color:rgba(255,255,255,1);
             @include webkit(border-radius, 3px);
@@ -178,7 +178,7 @@ nav {
             word-break:keep-all; white-space:nowrap;
             overflow:hidden;
 
-            a {padding:9px 16px;}
+            a {padding:9px 16px;min-width:64px}
             > li {
                 position:relative; width:100%;
                 a { width:100%; text-align:left; }
@@ -273,6 +273,7 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
     display:block;
     padding-top:0px;
     font-size:14px;
+    line-height:1.4em
 }
 
 .left-image-caption  {margin-left:-200px; float:left; text-align:right;clear:left; }
@@ -281,10 +282,9 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
 .left-image-caption:before, .right-image-caption:before, .image-caption:before {
     display:block;
     content:'';
-    height:1px;
+    height:8px;
     width:80px;
-    background-color:#AAA;
-    margin-bottom:10px;
+    border-top:1px solid #AAA;
 } 
 
 .image-caption {
@@ -406,21 +406,6 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
     }
 }
 
-.tile:nth-of-type(2) { @include webkit(animation-delay, .05s * 1); }
-.tile:nth-of-type(3) { @include webkit(animation-delay, .05s * 2); }
-.tile:nth-of-type(4) { @include webkit(animation-delay, .05s * 3); }
-.tile:nth-of-type(5) { @include webkit(animation-delay, .05s * 4); }
-.tile:nth-of-type(6) { @include webkit(animation-delay, .05s * 5); }
-.tile:nth-of-type(7) { @include webkit(animation-delay, .05s * 6); }
-.tile:nth-of-type(8) { @include webkit(animation-delay, .05s * 7); }
-.tile:nth-of-type(9) { @include webkit(animation-delay, .05s * 8); }
-.tile:nth-of-type(10){ @include webkit(animation-delay, .05s * 9); }
-.tile:nth-of-type(11){ @include webkit(animation-delay, .05s * 10); }
-.tile:nth-of-type(12){ @include webkit(animation-delay, .05s * 11); }
-.tile:nth-of-type(13){ @include webkit(animation-delay, .05s * 12); }
-.tile:nth-of-type(14){ @include webkit(animation-delay, .05s * 13); }
-.tile:nth-of-type(15){ @include webkit(animation-delay, .05s * 14); }
-.tile:nth-of-type(16){ @include webkit(animation-delay, .05s * 15); }
 
 .tile a.sub {
     display:inline-block;

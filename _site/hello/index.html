@@ -38,21 +38,21 @@
     
     <li><a href="/code" data-title="code">Code</a>
       <ul>
-      <li><a href="/code/games/epicflyer"><span>games / </span>Epic Flyer</a></li>
+      <li><a href="/code/web/unclubs"><span>web / </span>Uniclubs</a></li>
       <li><a href="/code"><b>See more...</b></a></li>
       </ul>
     </li>
     
     <li><a href="/design" data-title="design">Design</a>
       <ul>
-      <li><a href="/design/print/1kp2015"><span>print / </span>1000 Pitches 2015</a></li><li><a href="/design/print/portfolio2015"><span>print / </span>Portfolio 2015</a></li><li><a href="/design/print/yb2015"><span>print / </span>Lost in the World</a></li><li><a href="/design/web/journo"><span>web / </span>Charger Account</a></li>
+      <li><a href="/design/print/1kp2015"><span>print / </span>1000 Pitches 2015</a></li><li><a href="/design/apps/pinpoint"><span>apps / </span>Pinpoint</a></li><li><a href="/design/print/portfolio2015"><span>print / </span>Portfolio 2015</a></li><li><a href="/design/print/yb2015"><span>print / </span>Lost in the World</a></li><li><a href="/design/web/journo"><span>web / </span>Charger Account</a></li>
       <li><a href="/design"><b>See more...</b></a></li>
       </ul>
     </li>
     
     <li><a href="/misc" data-title="misc">Misc</a>
       <ul>
-      <li><a href="/misc/code/sinewave"><span>code / </span>Sine Wave</a></li><li><a href="/misc/code/geoflower"><span>code / </span>Geometric Flower</a></li><li><a href="/misc/photo/vsco"><span>photo / </span>VSCO Grid</a></li><li><a href="/misc/photo/yb2015"><span>photo / </span>Leland Football</a></li>
+      <li><a href="/misc/photo/china2015"><span>photo / </span>China 2015</a></li><li><a href="/misc/code/sinewave"><span>code / </span>Sine Wave</a></li><li><a href="/misc/code/geoflower"><span>code / </span>Geometric Flower</a></li><li><a href="/misc/photo/vsco"><span>photo / </span>VSCO Grid</a></li><li><a href="/misc/photo/yb2015"><span>photo / </span>Leland Football</a></li>
       <li><a href="/misc"><b>See more...</b></a></li>
       </ul>
     </li>
@@ -69,12 +69,15 @@
 
 .flux {
 	display:flex;
+	flex-wrap:wrap;
 	justify-content:center;
 }
 
 .flux > div {
     align-self: flex-start;
     flex-basis: auto;
+    padding:0 20px;
+    margin:0;
 }
 
 .sect {
@@ -88,9 +91,27 @@
 	background-color:#EEE;
 }
 
+.sidebar {
+	width:300px;
+}
+
+@media only screen and (max-width: 1044px) {
+	.flux {
+		display:block;
+	}
+
+	.flux > div {
+		padding:0;
+		margin:0 auto;
+		max-width:940px;
+		width:100%;
+	}
+}
+
 </style>
 
 <section style="
+	background-color:#0191d7;
     background-image: url('/assets/bg.jpg');
     background-size: cover;
     color: #FFF;
@@ -99,14 +120,14 @@
 		<img src="/assets/portrait.jpg" alt="" style="width:30%;max-width:150px;margin:0 auto;border-radius:5px;border:4px solid #FFF;box-shadow:0 1px 3px rgba(0,0,0,0.2)">
 		<h1 class="title-padding" style="#FFF;text-shadow:0 2px 2px rgba(0,0,0,0.2)">HELLO, I'M ANDREW.</h1>
 		<div class="content" style="text-align:center;">
-			<p class="sans">I'm a <a href="/code">developer</a> and <a href="/design">designer</a> based in LA.</p>
-			<p class="sans">I study Computer Science, Interactive Media, and Cinema at the <i style="white-space:nowrap">University of Southern California</i>.</p>
+			<p class="sans">I'm a <a href="/code"><b>developer</b></a> and <a href="/design"><b>designer</b></a> based in LA.</p>
+			<p class="sans">I study Computer Science, Interactive Media, and Cinema at the <b style="white-space:nowrap">University of Southern California</b>.</p>
 			<p class="sans">I've been creating websites since 5th grade.</p>
-			<p class="sans">I occassionally make <a href="/misc">other things</a> as well.</p>
+			<p class="sans">I occassionally make <a href="/misc"><b>other things</b></a> as well.</p>
 
 			<p></p><div><a href="/hello/resume" target="_blank" class="sub" style="color:#FFF;border-color:#FFF">Résumé</a><a href="/hello/email" target="_blank" class="sub" style="color:#FFF;border-color:#FFF">Email me</a></div><p><br></p>
 
-			<p class="sans">Connect with me on <a href="/hello/github" target="_blank">Github</a>, <a href="/hello/linkedin" target="_blank">LinkedIn</a> and <a href="/hello/twitter" target="_blank">Twitter</a>.</p>
+			<p class="sans">Connect with me on <a href="/hello/github" target="_blank"><b>Github</b></a>, <a href="/hello/linkedin" target="_blank"><b>LinkedIn</b></a> and <a href="/hello/twitter" target="_blank"><b>Twitter</b></a>.</p>
 		
 		</div>
 	</div>
@@ -122,7 +143,7 @@
 		</div>
 	</div>
 	<div class="s-pad bottom flux">
-		<div class="content" style="padding: 0 20px;margin:0">
+		<div class="content">
 			<div style="margin-bottom:60px;">
 				<h5>EXPERIENCE</h5>
 				<div class="sect">
@@ -172,7 +193,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="content" style="max-width:300px;padding:0 20px;margin:0">
+		<div class="content sidebar">
 			<div style="margin-bottom:60px;">
 				<h5>TOOLS</h5>
 				<div class="sect">
