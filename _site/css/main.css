@@ -587,6 +587,22 @@ section p.neg:after, footer p.neg:after {
         font-size: 1em;
         font-style: italic;
         padding-top: 16px; }
+      .tile figure figcaption > span {
+        position: absolute;
+        bottom: 0;
+        padding: 8px;
+        font-size: 11px;
+        line-height: 1em;
+        text-transform: uppercase; }
+        .tile figure figcaption > span.left {
+          left: 0; }
+        .tile figure figcaption > span.right {
+          right: 0; }
+        .tile figure figcaption > span > span {
+          display: inline-block;
+          height: 11px;
+          padding: 2px 4px;
+          border-radius: 3px; }
     .tile figure figcaption.show, .tile figure:hover figcaption {
       opacity: 1; }
   .tile.dk figure {
@@ -819,7 +835,10 @@ a.sub {
   a.sub {
     font-size: 18px;
     line-height: 1em;
-    padding: 12px 16px; } }
+    padding: 12px 16px; }
+
+  .content {
+    font-size: 17px; } }
 @media only screen and (max-width: 549px) {
   nav {
     padding: 10px 0 9px 0; }
@@ -850,7 +869,8 @@ a.sub {
     padding-bottom: 56px; }
 
   .content {
-    padding: 8px; }
+    padding: 8px;
+    font-size: 16px; }
 
   .title-padding {
     padding: 20px 0; }

@@ -379,6 +379,23 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
             opacity:0;
             b { font-size:1.5em; text-transform:uppercase; }
             p { font-size:1em; font-style:italic; padding-top:16px; }
+            > span {
+                position:absolute;
+                bottom:0;
+                padding:8px;
+                font-size:11px;
+                line-height:1em;
+                text-transform:uppercase;
+                &.left { left:0; }
+                &.right { right:0; }
+                > span {
+                    display:inline-block;
+                    height:11px;
+                    padding:2px 4px;
+                    border-radius:3px;
+                }
+            }
+
         }
         figcaption.show, &:hover figcaption { opacity:1; }
     }
@@ -558,6 +575,10 @@ nav > ul > li > ul { display:none!important; }
 
 a.sub { font-size:18px;line-height:1em;padding:12px 16px }
 
+.content {
+    font-size:17px;
+}
+
 }
 
 
@@ -578,7 +599,7 @@ h1 { font-size:36px; }
 
 .s-pad {padding:8px 8px 0 8px;}
 .s-pad.bottom-padding {padding-bottom:56px;}
-.content {padding:8px;}
+.content {padding:8px;font-size:16px}
 
 .title-padding { padding:20px 0;}
 .sub { font-size:22px; }

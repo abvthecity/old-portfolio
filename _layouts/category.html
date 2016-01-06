@@ -37,6 +37,8 @@ layout: default
       <figcaption style="background-color:rgba({{ post.rgb | join: ',' }},0.8)">
         <b>{{ post.title }}</b>
         {% if post.caption %}<p>{{post.caption}}</p> {% endif %}
+        <span class="left"><span>{{post.date | date: "%b %d, %Y"}}</span></span>
+        <span class="right">{% for cat in post.categories %}<span>{{cat}}</span>{% endfor %}</span>
       </figcaption>
     </figure>
   </a>

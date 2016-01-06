@@ -102,12 +102,21 @@ ul.gal-3 > li {
 }
 
 @media only screen and (max-width: 549px) {
+
+	ul.gallery {
+		margin:0;
+	}
+
+	ul.gallery > li > figure {
+		margin:0 8px;
+	}
+
 	ul.gal-3 > li {
 		width:100%;
 	}
 
 	figure.expanded, ul.gallery > li > figure.expanded {
-		padding:16px 0px;
+		padding:32px 0px;
 	}
 }
 
@@ -147,12 +156,19 @@ ul.gal-3 > li {
 	</div>
 	<div class="s-pad bottom">
 		<div style="padding-bottom:50px;text-align:center"><h5>Select Pages</h5></div>
-	{% assign url="https://dl.dropboxusercontent.com/u/94853077/portfolio/yb2015/thumb" %}
-	{% assign arr="cover,2,7,11,15,19,23,33,47,51,59,63,73,75,77,81,97,99,123,133,141,251,colophon" | split: "," %}
-	<ul class="gallery gal-3">
-	{% for ex in arr %}<li><figure class="" onclick="gexp(this)"><img src="{{url}}/{{ex}}.jpg"></figure></li>{% endfor %}
-	</ul>
-
+		{% assign url="https://dl.dropboxusercontent.com/u/94853077/portfolio/yb2015/thumb" %}
+		{% assign arr="cover,2,7,11,15,19,23,33,47,51,59,63,73,75,77,81,97,99,123,133,141,251,colophon" | split: "," %}
+		<ul class="gallery gal-3">
+		{% for ex in arr %}<li><figure class="" onclick="gexp(this)"><img src="{{url}}/{{ex}}.jpg"></figure></li>{% endfor %}
+		</ul>
+	</div>
+	<div class="s-pad bottom">
+		<div style="padding-bottom:50px;text-align:center"><h5>Select Photography</h5></div>
+		<ul class="gallery gal-3">
+			{% assign url="https://dl.dropboxusercontent.com/u/94853077/portfolio/yb2015/photo" %}
+			{% for ex in (1..11) %}<li><figure class="" onclick="gexp(this)"><img src="{{url}}/{{ex}}.jpg"></figure></li>{% endfor %}
+		</ul>
+		<div style="text-align:center"><a href="/misc/photo/yb2015" class="sub" target="_blank">See more photos</a></div>
 	</div>
 </section>
 <section>
