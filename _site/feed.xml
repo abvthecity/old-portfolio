@@ -5,8 +5,8 @@
     <description>Andrew&#39;s Portfolio</description>
     <link>http://andrewjiang.com/</link>
     <atom:link href="http://andrewjiang.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 07 Jan 2016 00:48:00 -0800</pubDate>
-    <lastBuildDate>Thu, 07 Jan 2016 00:48:00 -0800</lastBuildDate>
+    <pubDate>Thu, 07 Jan 2016 02:18:50 -0800</pubDate>
+    <lastBuildDate>Thu, 07 Jan 2016 02:18:50 -0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -26,16 +26,16 @@
       <item>
         <title>Uniclubs</title>
         <description>&lt;section&gt;
-	&lt;div class=&quot;s-pad title-padding&quot;&gt;
-		&lt;div&gt;
+	&lt;div class=&quot;s-pad&quot;&gt;
+		&lt;div class=&quot;title-padding&quot;&gt;
 			&lt;h1&gt;Uniclubs&lt;/h1&gt;
 			&lt;h5&gt;Say goodbye to involvement fairs. Coming soon.&lt;/h5&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/section&gt;</description>
         <pubDate>Fri, 08 Jan 2016 00:00:00 -0800</pubDate>
-        <link>http://andrewjiang.com/code/web/unclubs</link>
-        <guid isPermaLink="true">http://andrewjiang.com/code/web/unclubs</guid>
+        <link>http://andrewjiang.com/code/web/uniclubs</link>
+        <guid isPermaLink="true">http://andrewjiang.com/code/web/uniclubs</guid>
         
         
         <category>code</category>
@@ -51,11 +51,13 @@
 		&lt;h1&gt;1000 PITCHES&lt;/h1&gt;
 		&lt;h5&gt;Fall 2015 / &lt;a href=&quot;http://sparksc.org/&quot; target=&quot;_blank&quot;&gt;Spark SC&lt;/a&gt;&lt;/h5&gt;
 	&lt;/div&gt;
-	&lt;img src=&quot;/assets/projects/1kp/1kp2015.jpg&quot;&gt;
+	&lt;div class=&quot;bottom&quot;&gt;
+		&lt;img src=&quot;/assets/projects/1kp/1kp2015.jpg&quot;&gt;
+	&lt;/div&gt;
 	&lt;div class=&quot;s-pad bottom&quot;&gt;
 		&lt;div class=&quot;content&quot;&gt;
 			&lt;h5&gt;What is 1000 Pitches?&lt;/h5&gt;
-			&lt;p class=&quot;sans&quot;&gt;1000 Pitches is a 2-month-long competition run by Spark SC and hosted by MPowered. The goal is to empower USC students from all backgrounds to think entreprenurially, ideate solutions to problems relevant to them, and be able to pitch their ideas to an audience. Ultimately, we wanted to reach our goal of collecting 1000 pitches from 1000 students, which we did: &lt;a href=&quot;http://1000pitches.com/usc&quot; target=&quot;_blank&quot;&gt;1174&lt;/a&gt;.&lt;/p&gt;
+			&lt;p class=&quot;sans bottom&quot;&gt;1000 Pitches is a 2-month-long competition run by Spark SC and hosted by MPowered. The goal is to empower USC students from all backgrounds to think entreprenurially, ideate solutions to problems relevant to them, and be able to pitch their ideas to an audience. Ultimately, we wanted to reach our goal of collecting 1000 pitches from 1000 students, which we did: &lt;a href=&quot;http://1000pitches.com/usc&quot; target=&quot;_blank&quot;&gt;1174&lt;/a&gt;.&lt;/p&gt;
 			&lt;h5&gt;About the Branding&lt;/h5&gt;
 			&lt;p class=&quot;sans&quot;&gt;Our director of branding, Megan Park, set the tone for this year&#39;s 1000 pitches brand assets with subtle, gridded, blueprint-esque backdrops and a focus on white lines. My task was to design a targeted marketing strategy to gain participants within underrepresented communities at USC for entreprenurship. Instead of marketing towards engineers and business students, who make up the majority of our participants, we wanted to focus on cinema, art, music, and science students. These posters make up my effort to expand upon the brand, target unique communities, and tell a hidden story within each piece.&lt;/p&gt;
 		&lt;/div&gt;
@@ -78,100 +80,7 @@
     
       <item>
         <title>Pinpoint</title>
-        <description>&lt;style&gt;
-ul.gallery {
-	margin:0 -16px;
-	display:flex;
-	flex-flow:row wrap;
-	justify-content:left;
-}
-
-ul.gallery &gt; li {
-    align-self: flex-end;
-    flex-basis: auto;
-}
-
-ul.gallery &gt; li &gt; figure {
-	margin:0 16px;
-	padding-bottom:40px;
-}
-
-figure.expanded, ul.gallery &gt; li &gt; figure.expanded {
-	position:fixed;
-	background-color:rgba(255,255,255,0.9);
-	left:0;right:0;top:0;bottom:0;
-	margin:0;
-	padding:56px 56px 56px 56px;
-	z-index:999;
-}
-
-figure.expanded &gt; img {
-	max-height:100%;
-	margin:0 auto;
-}
-
-ul.gallery &gt; li &gt; figure &gt; figcaption {
-	height:3em;
-	padding:8px 0;
-}
-
-figure.expanded &gt; figcaption {
-	text-align:center;
-}
-
-ul.gal-3 &gt; li {
-	width:25%;
-}
-
-@media only screen and (max-width: 1199px) {
-	ul.gal-3 &gt; li {
-		width:50%;
-	}
-
-	.content.split {
-		display:block;
-	}
-
-	.content.split &gt; div {
-		display:block;
-	}
-
-	.content.split &gt; .left-col {
-		max-width:100%;
-		width:600px;
-		padding:0;
-		margin-bottom:50px;
-		text-align:left;
-	}
-
-	figure.expanded, ul.gallery &gt; li &gt; figure.expanded {
-		padding:28px;
-		padding-bottom:56px;
-	}
-}
-
-@media only screen and (max-width: 549px) {
-
-	ul.gallery {
-		margin:0;
-	}
-
-	ul.gallery &gt; li &gt; figure {
-		margin:0 8px;
-	}
-
-	ul.gal-3 &gt; li {
-		width:100%;
-	}
-
-	figure.expanded, ul.gallery &gt; li &gt; figure.expanded {
-		padding:32px 0px;
-	}
-}
-
-&lt;/style&gt;
-
-&lt;section&gt;
+        <description>&lt;section&gt;
 	&lt;div class=&quot;s-pad title-padding&quot;&gt;
 		&lt;div&gt;
 			&lt;h1&gt;Pinpoint&lt;/h1&gt;

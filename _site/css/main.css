@@ -102,41 +102,33 @@ a {
   color: inherit;
   cursor: pointer; }
 
-h1 {
-  font-size: 64px;
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-  line-height: 1.4em;
-  display: block; }
+  line-height: 1.1em;
+  display: block;
+  padding-bottom: 0.3em; }
+  h1.nopad, h2.nopad, h3.nopad, h4.nopad, h5.nopad, h6.nopad {
+    padding-bottom: 0; }
+  h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+    white-space: nowrap; }
+
+h1 {
+  font-size: 64px; }
 
 h2 {
-  font-size: 56px;
-  font-weight: bold;
-  line-height: 1.4em;
-  display: block; }
+  font-size: 56px; }
 
 h3 {
-  font-size: 45px;
-  font-weight: bold;
-  line-height: 1.4em;
-  display: block; }
+  font-size: 45px; }
 
 h4 {
-  font-size: 34px;
-  font-weight: bold;
-  line-height: 1.4em;
-  display: block; }
+  font-size: 34px; }
 
 h5 {
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 1.4em;
-  display: block; }
+  font-size: 24px; }
 
 h6 {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.4em;
-  display: block; }
+  font-size: 20px; }
 
 hr {
   display: block;
@@ -368,10 +360,9 @@ section:after, footer:after {
   clear: both; }
 
 .s-pad {
-  padding: 32px 56px;
-  padding-bottom: 0; }
+  padding: 32px 56px; }
 
-.s-pad.bottom {
+.bottom {
   padding-bottom: 100px; }
 
 .s-tile {
@@ -656,6 +647,42 @@ a.sub {
     color: #FFF;
     background-color: #E85676; }
 
+ul.gallery {
+  margin: 0 -16px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left; }
+  ul.gallery.center {
+    justify-content: center; }
+  ul.gallery li {
+    align-self: flex-end;
+    flex-basis: auto; }
+    ul.gallery li figure {
+      margin: 0 16px;
+      padding-bottom: 40px; }
+      ul.gallery li figure figcaption {
+        height: 3em;
+        padding: 8px 0; }
+  ul.gallery.gal-3 > li {
+    width: 25%; }
+
+figure.expanded, ul.gallery > li > figure.expanded {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 56px 56px 56px 56px;
+  z-index: 999; }
+
+figure.expanded img {
+  max-height: 100%;
+  margin: 0 auto; }
+figure.expanded figcaption {
+  text-align: center; }
+
 @media only screen and (max-width: 1549px) {
   .tile {
     width: 25%; } }
@@ -666,18 +693,33 @@ a.sub {
   h1 {
     font-size: 50px; }
 
+  h2 {
+    font-size: 45px; }
+
+  h3 {
+    font-size: 34px; }
+
+  h4 {
+    font-size: 28px; }
+
+  h5 {
+    font-size: 24px; }
+
+  h6 {
+    font-size: 20px; }
+
   .tile {
     width: 33.33333%; }
 
   .s-pad {
-    padding: 16px 32px;
-    padding-bottom: 0; }
+    padding: 16px 32px; }
 
-  .s-pad.bottom-padding {
+  .bottom {
     padding-bottom: 70px; }
 
   .title-padding {
-    padding: 30px 0; }
+    padding-top: 30px;
+    padding-bottom: 30px; }
 
   .sub {
     font-size: 30px; }
@@ -723,27 +765,35 @@ a.sub {
     padding: 20px;
     width: auto;
     margin-bottom: 30px;
-    font-size: 24px; } }
+    font-size: 24px; }
+
+  ul.gallery.gal-3 > li {
+    width: 33.33333%; }
+
+  figure.expanded, ul.gallery > li > figure.expanded {
+    padding: 28px;
+    padding-bottom: 56px; } }
 @media only screen and (max-width: 899px) {
   nav {
     padding: 10px 16px 9px 16px;
     text-align: center; }
-
-  nav a {
-    padding: 9px 16px;
-    height: 18px; }
-
-  nav > ul > li > ul {
-    display: none !important; }
+    nav a {
+      padding: 9px 16px;
+      height: 18px; }
+    nav > ul > li > ul {
+      display: none !important; }
 
   .tile {
     width: 50%;
     height: 180px; }
+    .tile > a:hover, .tile > div:hover {
+      -webkit-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      transform: scale(1, 1); }
 
-  .tile > a:hover,
-  .tile > div:hover {
-    transform: scale(1, 1);
-    -webkit-transform: scale(1, 1); }
+  .content {
+    font-size: 17px; }
 
   .large-quote {
     font-size: 25px; }
@@ -752,50 +802,74 @@ a.sub {
     font-size: 40px; }
 
   .s-pad {
-    padding: 16px 16px 0 16px; }
+    padding: 16px; }
+
+  .bottom {
+    padding-bottom: 50px; }
+
+  .title-padding {
+    padding-top: 26px;
+    padding-bottom: 26px; }
 
   a.sub {
     font-size: 18px;
     line-height: 1em;
     padding: 12px 16px; }
 
-  .content {
-    font-size: 17px; } }
+  ul.gallery {
+    margin: 0 -8px; }
+    ul.gallery li figure {
+      margin: 0 8px; }
+    ul.gallery.gal-3 > li {
+      width: 50%; } }
 @media only screen and (max-width: 549px) {
   nav {
-    padding: 10px 0 9px 0; }
-
-  /* padding = 16px */
-  nav a {
-    padding: 9px 16px; }
+    padding: 10px 0 9px 0;
+    /* padding = 16px */ }
+    nav a {
+      padding: 9px 16px; }
 
   h1 {
-    font-size: 36px; }
+    font-size: 45px; }
+
+  h2 {
+    font-size: 34px; }
+
+  h3 {
+    font-size: 28px; }
+
+  h4 {
+    font-size: 24px; }
+
+  h5 {
+    font-size: 20px; }
+
+  h6 {
+    font-size: 18px; }
 
   .tile_ul {
     margin: 0; }
-
-  .tile {
-    width: 100%; }
-
-  .tile > a, .tile > div {
-    margin: 8px 4px; }
+    .tile_ul .tile {
+      width: 100%; }
+      .tile_ul .tile > a, .tile_ul .tile > div {
+        margin: 8px 4px; }
 
   .section-tile {
     margin: 0; }
-
-  .s-pad {
-    padding: 8px 8px 0 8px; }
-
-  .s-pad.bottom-padding {
-    padding-bottom: 56px; }
 
   .content {
     padding: 8px;
     font-size: 16px; }
 
+  .s-pad {
+    padding: 8px 8px; }
+
+  .bottom {
+    padding-bottom: 30px; }
+
   .title-padding {
-    padding: 20px 0; }
+    padding-top: 20px;
+    padding-bottom: 20px; }
 
   .sub {
     font-size: 22px; }
@@ -810,4 +884,14 @@ a.sub {
     padding: 20px 0px 50px 0px; }
 
   .heading {
-    font-size: 30px; } }
+    font-size: 30px; }
+
+  ul.gallery {
+    margin: 0; }
+    ul.gallery li figure {
+      margin: 0 -8px; }
+    ul.gallery.gal-3 > li {
+      width: 100%; }
+
+  figure.expanded, ul.gallery > li > figure.expanded {
+    padding: 32px 0px; } }

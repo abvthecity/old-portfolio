@@ -38,7 +38,7 @@
     
     <li><a href="/code" data-title="code">Code</a>
       <ul>
-      <li><a href="/code/web/unclubs"><span>web / </span>Uniclubs</a></li>
+      <li><a href="/code/web/uniclubs"><span>web / </span>Uniclubs</a></li>
       <li><a href="/code"><b>See more...</b></a></li>
       </ul>
     </li>
@@ -87,54 +87,7 @@
 	vertical-align:bottom;
 }
 
-ul.gallery {
-	margin:0 -16px;
-	display:flex;
-	flex-flow:row wrap;
-	justify-content:center;
-}
-
-ul.gallery > li {
-    align-self: flex-end;
-    flex-basis: auto;
-}
-
-ul.gallery > li > figure {
-	margin:0 16px;
-	padding-bottom:40px;
-}
-
-figure.expanded, ul.gallery > li > figure.expanded {
-	position:fixed;
-	background-color:rgba(255,255,255,0.9);
-	left:0;right:0;top:0;bottom:0;
-	margin:0;
-	padding:56px 56px 56px 56px;
-	z-index:999;
-}
-
-figure.expanded > img {
-	max-height:100%;
-	margin:0 auto;
-}
-
-ul.gallery > li > figure > figcaption {
-	height:3em;
-	padding:8px 0;
-}
-
-figure.expanded > figcaption {
-	text-align:center;
-}
-
-ul.gal-3 > li {
-	width:25%;
-}
-
 @media only screen and (max-width: 1199px) {
-	ul.gal-3 > li {
-		width:50%;
-	}
 
 	.content.split {
 		display:block;
@@ -150,30 +103,6 @@ ul.gal-3 > li {
 		padding:0;
 		margin-bottom:50px;
 		text-align:left;
-	}
-
-	figure.expanded, ul.gallery > li > figure.expanded {
-		padding:28px;
-		padding-bottom:56px;
-	}
-}
-
-@media only screen and (max-width: 549px) {
-
-	ul.gallery {
-		margin:0;
-	}
-
-	ul.gallery > li > figure {
-		margin:0 8px;
-	}
-
-	ul.gal-3 > li {
-		width:100%;
-	}
-
-	figure.expanded, ul.gallery > li > figure.expanded {
-		padding:32px 0px;
 	}
 }
 
@@ -201,7 +130,7 @@ ul.gal-3 > li {
 </section>
 <section>
 	<div class="s-pad ">
-		<ul class="gallery gal-3">
+		<ul class="gallery gal-3 center">
 			<li><figure class="" onclick="gexp(this)"><img src="/assets/projects/yb2015/freshmen.jpg"><figcaption>Freshman year represents a canvas, but the canvases aren't blank. Each student has a dinstinctive personality as well as four more years to paint their story.</figcaption></figure></li>
 			<li><figure class="" onclick="gexp(this)"><img src="/assets/projects/yb2015/sophomores.jpg"><figcaption>Sophomores are approaching a fork in the road: this is the year students find themselves eliminating different paths.</figcaption></figure></li>
 			<li><figure class="" onclick="gexp(this)"><img src="/assets/projects/yb2015/juniors.jpg"><figcaption>Juniors have begun exploring their passions, enriching their extracurriculars, and honing their talents.</figcaption></figure></li>
