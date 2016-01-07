@@ -5,13 +5,22 @@
     <description>Andrew&#39;s Portfolio</description>
     <link>http://andrewjiang.com/</link>
     <atom:link href="http://andrewjiang.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 07 Jan 2016 02:31:34 -0800</pubDate>
-    <lastBuildDate>Thu, 07 Jan 2016 02:31:34 -0800</lastBuildDate>
+    <pubDate>Thu, 07 Jan 2016 02:47:05 -0800</pubDate>
+    <lastBuildDate>Thu, 07 Jan 2016 02:47:05 -0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>hackSChedule</title>
-        <description>&lt;center&gt;Redirecting...&lt;/center&gt;</description>
+        <description>&lt;section&gt;
+	&lt;div class=&quot;s-pad bottom&quot;&gt;
+		&lt;div class=&quot;title-padding&quot;&gt;
+			&lt;h1 style=&quot;color:rgb(255,177,8)&quot;&gt;hack&lt;u&gt;SC&lt;/u&gt;hedule&lt;/h1&gt;
+			&lt;h5&gt;Design your perfect course schedule. Coming soon.&lt;/h5&gt;
+			&lt;div class=&quot;bottom&quot;&gt;&lt;/div&gt;
+			&lt;a href=&quot;http://github.com/ninjiangstar/hackschedule-php&quot; target=&quot;_blank&quot; class=&quot;sub&quot;&gt;Stay tuned on Github.&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</description>
         <pubDate>Fri, 22 Jan 2016 00:00:00 -0800</pubDate>
         <link>http://andrewjiang.com/code/web/hackschedule</link>
         <guid isPermaLink="true">http://andrewjiang.com/code/web/hackschedule</guid>
@@ -28,8 +37,10 @@
         <description>&lt;section&gt;
 	&lt;div class=&quot;s-pad&quot;&gt;
 		&lt;div class=&quot;title-padding&quot;&gt;
-			&lt;h1&gt;Uniclubs&lt;/h1&gt;
+			&lt;h1 style=&quot;color:rgb(197,41,45)&quot;&gt;Uniclubs&lt;/h1&gt;
 			&lt;h5&gt;Say goodbye to involvement fairs. Coming soon.&lt;/h5&gt;
+			&lt;div class=&quot;bottom&quot;&gt;&lt;/div&gt;
+			&lt;a href=&quot;http://github.com/ninjiangstar/uniclubs&quot; target=&quot;_blank&quot; class=&quot;sub&quot;&gt;Stay tuned on Github.&lt;/a&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/section&gt;</description>

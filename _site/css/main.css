@@ -888,7 +888,7 @@ figure.expanded figcaption {
   ul.gallery {
     margin: 0; }
     ul.gallery li figure {
-      margin: 0 -8px; }
+      margin: 0 -16px; }
     ul.gallery.gal-3 > li {
       width: 100%; }
     ul.gallery figcaption {
