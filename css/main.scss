@@ -2,8 +2,6 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-@font-face { font-family:'HelveticaNeue'; src:local('HelveticaNeue'); font-weight:normal; }
-@font-face { font-family:'HelveticaNeue'; src:local('HelveticaNeue-Bold'), local('Helvetica-Bold'); font-weight:bold; }
 
 
 // Our variables
@@ -35,7 +33,6 @@ $on-laptop:        800px;
 @mixin webkit($property, $content){
 	-webkit-#{$property}: $content;
 	-moz-#{$property}: $content;
-	-ms-#{$property}: $content;
 	#{$property}: $content;
 }
 

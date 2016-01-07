@@ -168,25 +168,31 @@
 </main>
 
 <script>
-function tileSize(call){
-  var tileSize = window.getComputedStyle(document.getElementsByClassName("tile")[0]).getPropertyValue('width');
+function tileSizeSq(call){
+  var tileSize = window.getComputedStyle(document.getElementsByClassName("tile")[0]).getPropertyValue('width')
+  var tileCount = document.getElementsByClassName("tile").length
 
-  for (i = 0; i < document.getElementsByClassName("tile").length ; i++ ){
+  for (i = 0; i < tileCount; i++ ){
 
     var elem = document.getElementsByClassName("tile")[i]
     elem.style.height = tileSize
 
-    if(call == "load"){
-      var anim = "animation-delay:"+(0.05*i)+"s"
-      elem.setAttribute("style","-webkit-"+anim+";-moz-"+anim+";-ms-"+anim+";"+anim+";height:"+tileSize)
-    }
+  }
 
+  if(call == "load"){
+    for(i = 0; i < tileCount; i++){
+      var anim = (0.05*i)+"s"
+      var elem = document.getElementsByClassName("tile")[i]
+      elem.style["-webkit-animation-delay"] = anim
+      elem.style["-moz-animation-delay"] = anim
+      elem.style.animationDelay = anim
+    }
   }
 } 
 
-document.onLoad = tileSize("load")
-window.onLoad = tileSize("load")
-window.addEventListener("resize", tileSize) // execute
+window.onLoad = tileSizeSq("load")
+document.onLoad = tileSizeSq("load")
+window.addEventListener("resize", tileSizeSq) // execute
 </script>
 
 
