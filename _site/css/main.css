@@ -578,8 +578,8 @@ section p.neg:after, footer p.neg:after {
       right: 0;
       top: 0;
       bottom: 0;
-      opacity: 0.2;
-      z-index: 0; }
+      opacity: 0;
+      z-index: 2; }
     .tile figure figcaption {
       display: table-cell;
       width: 100%;
@@ -616,8 +616,7 @@ section p.neg:after, footer p.neg:after {
     .tile figure figcaption.show, .tile figure:hover figcaption {
       opacity: 1; }
     .tile figure > span.show, .tile figure:hover > span {
-      z-index: 2;
-      opacity: 1; }
+      opacity: 0.8; }
   .tile.dk figure {
     background-color: #FFF;
     color: #FFF;

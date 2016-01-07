@@ -81,9 +81,9 @@
 
 <li class="tile">
   <a href="/misc/photo/china2015" target="_blank">
-    <figure>
+    <figure style="background-color:rgba(200,130,60,1)">
       <img alt="" src="/assets/works/china.jpg">
-      <span style="background-color:rgba(200,130,60,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>China 2015</b>
         <p>Photos captured during my 1-month trip in China / iPhone</p> 
@@ -96,9 +96,9 @@
 
 <li class="tile dk">
   <a href="/misc/photo/vsco" target="_blank">
-    <figure>
+    <figure style="background-color:rgba(158,112,46,1)">
       <img alt="" src="/assets/works/9.jpg">
-      <span style="background-color:rgba(158,112,46,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>VSCO Grid</b>
         <p>iPhone Photography. <br>Ocassionally Updated.</p> 
@@ -111,9 +111,9 @@
 
 <li class="tile">
   <a href="/misc/photo/yb2015" target="_blank">
-    <figure>
+    <figure style="background-color:rgba(41,184,225,1)">
       <img alt="" src="/assets/works/yb2015_photo.jpg">
-      <span style="background-color:rgba(41,184,225,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Leland Football</b>
         <p>LEGEND Photography<br> DSLR / iPhone</p> 
@@ -140,7 +140,7 @@ function tileSize(call){
     elem.style.height = tileSize
 
     if(call == "load"){
-      var anim = "animation-delay:"+(0.05*(i-1))+"s"
+      var anim = "animation-delay:"+(0.05*i)+"s"
       elem.setAttribute("style","-webkit-"+anim+";-moz-"+anim+";-ms-"+anim+";"+anim+";height:"+tileSize)
     }
 

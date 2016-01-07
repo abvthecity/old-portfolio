@@ -81,9 +81,9 @@
 
 <li class="tile dk">
   <a href="/design/web/journo" target="_blank">
-    <figure>
+    <figure style="background-color:rgba(198,29,127,1)">
       <img alt="" src="/assets/works/7.jpg">
-      <span style="background-color:rgba(198,29,127,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Charger Account</b>
         <p>Leland High School's official online newspaper.</p> 
@@ -96,9 +96,9 @@
 
 <li class="tile dk">
   <a href="/design/web/paradata">
-    <figure>
+    <figure style="background-color:rgba(44,85,239,1)">
       <img alt="" src="/assets/works/8.jpg">
-      <span style="background-color:rgba(44,85,239,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Paradata Portal</b>
         <p>User experience redesign of database portal using Material Design.</p> 
@@ -111,9 +111,9 @@
 
 <li class="tile">
   <a href="/design/web/robotics" target="_blank">
-    <figure>
+    <figure style="background-color:rgba(251,182,19,1)">
       <img alt="" src="/assets/works/604robotics.jpg">
-      <span style="background-color:rgba(251,182,19,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>604 Robotics</b>
         
@@ -126,9 +126,9 @@
 
 <li class="tile">
   <a href="/design/web/sfl">
-    <figure>
+    <figure style="background-color:rgba(111,198,28,1)">
       <img alt="" src="/assets/works/4.jpg">
-      <span style="background-color:rgba(111,198,28,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Speak For Life</b>
         <p>Promoting the importance of speech. Website, branding, etc.</p> 
@@ -141,9 +141,9 @@
 
 <li class="tile dk">
   <a href="/design/web/past">
-    <figure>
+    <figure style="background-color:rgba(232,99,32,1)">
       <img alt="" src="/assets/works/1.jpg">
-      <span style="background-color:rgba(232,99,32,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Past Web Projects</b>
         
@@ -170,7 +170,7 @@ function tileSize(call){
     elem.style.height = tileSize
 
     if(call == "load"){
-      var anim = "animation-delay:"+(0.05*(i-1))+"s"
+      var anim = "animation-delay:"+(0.05*i)+"s"
       elem.setAttribute("style","-webkit-"+anim+";-moz-"+anim+";-ms-"+anim+";"+anim+";height:"+tileSize)
     }
 

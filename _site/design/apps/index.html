@@ -81,9 +81,9 @@
 
 <li class="tile">
   <a href="/design/apps/pinpoint">
-    <figure>
+    <figure style="background-color:rgba(255,255,255,1)">
       <img alt="" src="/assets/works/pinpoint.jpg">
-      <span style="background-color:rgba(255,255,255,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Pinpoint</b>
         <p>Crowsourced City Guide (iOS)</p> 
@@ -96,9 +96,9 @@
 
 <li class="tile">
   <a href="/design/apps/epicflyer">
-    <figure>
+    <figure style="background-color:rgba(255,255,1,1)">
       <img alt="" src="/assets/works/epic.jpg">
-      <span style="background-color:rgba(255,255,1,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Epic Flyer</b>
         <p>iOS Game (incomplete)</p> 
@@ -125,7 +125,7 @@ function tileSize(call){
     elem.style.height = tileSize
 
     if(call == "load"){
-      var anim = "animation-delay:"+(0.05*(i-1))+"s"
+      var anim = "animation-delay:"+(0.05*i)+"s"
       elem.setAttribute("style","-webkit-"+anim+";-moz-"+anim+";-ms-"+anim+";"+anim+";height:"+tileSize)
     }
 

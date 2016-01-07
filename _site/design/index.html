@@ -89,9 +89,9 @@
 
 <li class="tile dk">
   <a href="/design/print/1kp2015">
-    <figure>
+    <figure style="background-color:rgba(57,108,175,1)">
       <img alt="" src="/assets/works/1kp2015.jpg">
-      <span style="background-color:rgba(57,108,175,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>1000 Pitches 2015</b>
         <p>Spark SC event</p> 
@@ -104,9 +104,9 @@
 
 <li class="tile">
   <a href="/design/apps/pinpoint">
-    <figure>
+    <figure style="background-color:rgba(255,255,255,1)">
       <img alt="" src="/assets/works/pinpoint.jpg">
-      <span style="background-color:rgba(255,255,255,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Pinpoint</b>
         <p>Crowsourced City Guide (iOS)</p> 
@@ -119,9 +119,9 @@
 
 <li class="tile dk">
   <a href="/design/print/portfolio2015">
-    <figure>
+    <figure style="background-color:rgba(90,140,190,1)">
       <img alt="" src="/assets/works/2015.jpg">
-      <span style="background-color:rgba(90,140,190,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Portfolio 2015</b>
         <p>Physical booklet</p> 
@@ -134,9 +134,9 @@
 
 <li class="tile dk">
   <a href="/design/print/yb2015">
-    <figure>
+    <figure style="background-color:rgba(247,35,134,1)">
       <img alt="" src="/assets/works/yb2015.jpg">
-      <span style="background-color:rgba(247,35,134,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Lost in the World</b>
         <p>LEGEND / Yearbook 2015</p> 
@@ -149,9 +149,9 @@
 
 <li class="tile dk">
   <a href="/design/web/journo" target="_blank">
-    <figure>
+    <figure style="background-color:rgba(198,29,127,1)">
       <img alt="" src="/assets/works/7.jpg">
-      <span style="background-color:rgba(198,29,127,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Charger Account</b>
         <p>Leland High School's official online newspaper.</p> 
@@ -164,9 +164,9 @@
 
 <li class="tile dk">
   <a href="/design/web/paradata">
-    <figure>
+    <figure style="background-color:rgba(44,85,239,1)">
       <img alt="" src="/assets/works/8.jpg">
-      <span style="background-color:rgba(44,85,239,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Paradata Portal</b>
         <p>User experience redesign of database portal using Material Design.</p> 
@@ -179,9 +179,9 @@
 
 <li class="tile dk">
   <a href="/design/print/yb2014">
-    <figure>
+    <figure style="background-color:rgba(107,63,122,1)">
       <img alt="" src="/assets/works/5.jpg">
-      <span style="background-color:rgba(107,63,122,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Come Together</b>
         <p>LEGEND / Yearbook 2014</p> 
@@ -194,9 +194,9 @@
 
 <li class="tile dk">
   <a href="/design/print/helvetica">
-    <figure>
+    <figure style="background-color:rgba(223,92,32,1)">
       <img alt="" src="/assets/works/6.jpg">
-      <span style="background-color:rgba(223,92,32,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Helvetica Magazine</b>
         <p>Inspiring Leland students with graduating personal statements.</p> 
@@ -209,9 +209,9 @@
 
 <li class="tile">
   <a href="/design/apps/epicflyer">
-    <figure>
+    <figure style="background-color:rgba(255,255,1,1)">
       <img alt="" src="/assets/works/epic.jpg">
-      <span style="background-color:rgba(255,255,1,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Epic Flyer</b>
         <p>iOS Game (incomplete)</p> 
@@ -224,9 +224,9 @@
 
 <li class="tile">
   <a href="/design/web/robotics" target="_blank">
-    <figure>
+    <figure style="background-color:rgba(251,182,19,1)">
       <img alt="" src="/assets/works/604robotics.jpg">
-      <span style="background-color:rgba(251,182,19,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>604 Robotics</b>
         
@@ -239,9 +239,9 @@
 
 <li class="tile">
   <a href="/design/web/sfl">
-    <figure>
+    <figure style="background-color:rgba(111,198,28,1)">
       <img alt="" src="/assets/works/4.jpg">
-      <span style="background-color:rgba(111,198,28,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Speak For Life</b>
         <p>Promoting the importance of speech. Website, branding, etc.</p> 
@@ -254,9 +254,9 @@
 
 <li class="tile dk">
   <a href="/design/web/past">
-    <figure>
+    <figure style="background-color:rgba(232,99,32,1)">
       <img alt="" src="/assets/works/1.jpg">
-      <span style="background-color:rgba(232,99,32,0.8)"></span>
+      <span style="background-color:inherit;"></span>
       <figcaption>
         <b>Past Web Projects</b>
         
@@ -283,7 +283,7 @@ function tileSize(call){
     elem.style.height = tileSize
 
     if(call == "load"){
-      var anim = "animation-delay:"+(0.05*(i-1))+"s"
+      var anim = "animation-delay:"+(0.05*i)+"s"
       elem.setAttribute("style","-webkit-"+anim+";-moz-"+anim+";-ms-"+anim+";"+anim+";height:"+tileSize)
     }
 
