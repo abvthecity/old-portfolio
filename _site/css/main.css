@@ -571,6 +571,15 @@ section p.neg:after, footer p.neg:after {
       width: 100%;
       height: 100%;
       position: absolute; }
+    .tile figure > span {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      opacity: 0.2;
+      z-index: 0; }
     .tile figure figcaption {
       display: table-cell;
       width: 100%;
@@ -605,6 +614,9 @@ section p.neg:after, footer p.neg:after {
           padding: 2px 4px;
           border-radius: 3px; }
     .tile figure figcaption.show, .tile figure:hover figcaption {
+      opacity: 1; }
+    .tile figure > span.show, .tile figure:hover > span {
+      z-index: 2;
       opacity: 1; }
   .tile.dk figure {
     background-color: #FFF;

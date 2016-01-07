@@ -83,7 +83,8 @@
   <a href="/misc/photo/china2015" target="_blank">
     <figure>
       <img alt="" src="/assets/works/china.jpg">
-      <figcaption style="background-color:rgba(200,130,60,0.8)">
+      <span style="background-color:rgba(200,130,60,0.8)"></span>
+      <figcaption>
         <b>China 2015</b>
         <p>Photos captured during my 1-month trip in China / iPhone</p> 
         <span class="left"><span>Jul 07, 2015</span></span>
@@ -97,7 +98,8 @@
   <a href="/misc/photo/vsco" target="_blank">
     <figure>
       <img alt="" src="/assets/works/9.jpg">
-      <figcaption style="background-color:rgba(158,112,46,0.8)">
+      <span style="background-color:rgba(158,112,46,0.8)"></span>
+      <figcaption>
         <b>VSCO Grid</b>
         <p>iPhone Photography. <br>Ocassionally Updated.</p> 
         <span class="left"><span>Nov 11, 2014</span></span>
@@ -111,7 +113,8 @@
   <a href="/misc/photo/yb2015" target="_blank">
     <figure>
       <img alt="" src="/assets/works/yb2015_photo.jpg">
-      <figcaption style="background-color:rgba(41,184,225,0.8)">
+      <span style="background-color:rgba(41,184,225,0.8)"></span>
+      <figcaption>
         <b>Leland Football</b>
         <p>LEGEND Photography<br> DSLR / iPhone</p> 
         <span class="left"><span>Sep 13, 2014</span></span>
@@ -128,12 +131,24 @@
 </main>
 
 <script>
-function tileSize(){ 
+function tileSize(call){
+  var tileSize = window.getComputedStyle(document.getElementsByClassName("tile")[0]).getPropertyValue('width');
+
   for (i = 0; i < document.getElementsByClassName("tile").length ; i++ ){
-    document.getElementsByClassName("tile")[i].setAttribute("style","-webkit-animation-delay:"+(0.05*(i-1))+"s;-moz-animation-delay:"+(0.05*(i-1))+"s;-ms-animation-delay:"+(0.05*(i-1))+"s;animation-delay:"+(0.05*(i-1))+"s;");
-    document.getElementsByClassName("tile")[i].style.height = window.getComputedStyle(document.getElementsByClassName("tile")[i]).getPropertyValue('width');
+
+    var elem = document.getElementsByClassName("tile")[i]
+    elem.style.height = tileSize
+
+    if(call == "load"){
+      var anim = "animation-delay:"+(0.05*(i-1))+"s"
+      elem.setAttribute("style","-webkit-"+anim+";-moz-"+anim+";-ms-"+anim+";"+anim+";height:"+tileSize)
+    }
+
   }
-} document.onLoad = tileSize(); window.addEventListener("resize", tileSize); // execute
+} 
+
+document.onLoad = tileSize("load") 
+window.addEventListener("resize", tileSize) // execute
 </script>
 
 

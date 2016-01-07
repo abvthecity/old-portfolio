@@ -91,7 +91,8 @@
   <a href="/code/web/unclubs">
     <figure>
       <img alt="" src="/assets/works/uniclubs.jpg">
-      <figcaption style="background-color:rgba(197,41,45,0.8)">
+      <span style="background-color:rgba(197,41,45,0.8)"></span>
+      <figcaption>
         <b>Uniclubs</b>
         <p>Say goodbye to involvement fairs.</p> 
         <span class="left"><span>Jan 08, 2016</span></span>
@@ -108,12 +109,24 @@
 </main>
 
 <script>
-function tileSize(){ 
+function tileSize(call){
+  var tileSize = window.getComputedStyle(document.getElementsByClassName("tile")[0]).getPropertyValue('width');
+
   for (i = 0; i < document.getElementsByClassName("tile").length ; i++ ){
-    document.getElementsByClassName("tile")[i].setAttribute("style","-webkit-animation-delay:"+(0.05*(i-1))+"s;-moz-animation-delay:"+(0.05*(i-1))+"s;-ms-animation-delay:"+(0.05*(i-1))+"s;animation-delay:"+(0.05*(i-1))+"s;");
-    document.getElementsByClassName("tile")[i].style.height = window.getComputedStyle(document.getElementsByClassName("tile")[i]).getPropertyValue('width');
+
+    var elem = document.getElementsByClassName("tile")[i]
+    elem.style.height = tileSize
+
+    if(call == "load"){
+      var anim = "animation-delay:"+(0.05*(i-1))+"s"
+      elem.setAttribute("style","-webkit-"+anim+";-moz-"+anim+";-ms-"+anim+";"+anim+";height:"+tileSize)
+    }
+
   }
-} document.onLoad = tileSize(); window.addEventListener("resize", tileSize); // execute
+} 
+
+document.onLoad = tileSize("load") 
+window.addEventListener("resize", tileSize) // execute
 </script>
 
 

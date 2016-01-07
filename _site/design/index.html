@@ -91,7 +91,8 @@
   <a href="/design/print/1kp2015">
     <figure>
       <img alt="" src="/assets/works/1kp2015.jpg">
-      <figcaption style="background-color:rgba(57,108,175,0.8)">
+      <span style="background-color:rgba(57,108,175,0.8)"></span>
+      <figcaption>
         <b>1000 Pitches 2015</b>
         <p>Spark SC event</p> 
         <span class="left"><span>Dec 12, 2015</span></span>
@@ -105,7 +106,8 @@
   <a href="/design/apps/pinpoint">
     <figure>
       <img alt="" src="/assets/works/pinpoint.jpg">
-      <figcaption style="background-color:rgba(255,255,255,0.8)">
+      <span style="background-color:rgba(255,255,255,0.8)"></span>
+      <figcaption>
         <b>Pinpoint</b>
         <p>Crowsourced City Guide (iOS)</p> 
         <span class="left"><span>Dec 10, 2015</span></span>
@@ -119,7 +121,8 @@
   <a href="/design/print/portfolio2015">
     <figure>
       <img alt="" src="/assets/works/2015.jpg">
-      <figcaption style="background-color:rgba(90,140,190,0.8)">
+      <span style="background-color:rgba(90,140,190,0.8)"></span>
+      <figcaption>
         <b>Portfolio 2015</b>
         <p>Physical booklet</p> 
         <span class="left"><span>Jun 03, 2015</span></span>
@@ -133,7 +136,8 @@
   <a href="/design/print/yb2015">
     <figure>
       <img alt="" src="/assets/works/yb2015.jpg">
-      <figcaption style="background-color:rgba(247,35,134,0.8)">
+      <span style="background-color:rgba(247,35,134,0.8)"></span>
+      <figcaption>
         <b>Lost in the World</b>
         <p>LEGEND / Yearbook 2015</p> 
         <span class="left"><span>May 12, 2015</span></span>
@@ -147,7 +151,8 @@
   <a href="/design/web/journo" target="_blank">
     <figure>
       <img alt="" src="/assets/works/7.jpg">
-      <figcaption style="background-color:rgba(198,29,127,0.8)">
+      <span style="background-color:rgba(198,29,127,0.8)"></span>
+      <figcaption>
         <b>Charger Account</b>
         <p>Leland High School's official online newspaper.</p> 
         <span class="left"><span>Jan 04, 2015</span></span>
@@ -161,7 +166,8 @@
   <a href="/design/web/paradata">
     <figure>
       <img alt="" src="/assets/works/8.jpg">
-      <figcaption style="background-color:rgba(44,85,239,0.8)">
+      <span style="background-color:rgba(44,85,239,0.8)"></span>
+      <figcaption>
         <b>Paradata Portal</b>
         <p>User experience redesign of database portal using Material Design.</p> 
         <span class="left"><span>Aug 13, 2014</span></span>
@@ -175,7 +181,8 @@
   <a href="/design/print/yb2014">
     <figure>
       <img alt="" src="/assets/works/5.jpg">
-      <figcaption style="background-color:rgba(107,63,122,0.8)">
+      <span style="background-color:rgba(107,63,122,0.8)"></span>
+      <figcaption>
         <b>Come Together</b>
         <p>LEGEND / Yearbook 2014</p> 
         <span class="left"><span>May 12, 2014</span></span>
@@ -189,7 +196,8 @@
   <a href="/design/print/helvetica">
     <figure>
       <img alt="" src="/assets/works/6.jpg">
-      <figcaption style="background-color:rgba(223,92,32,0.8)">
+      <span style="background-color:rgba(223,92,32,0.8)"></span>
+      <figcaption>
         <b>Helvetica Magazine</b>
         <p>Inspiring Leland students with graduating personal statements.</p> 
         <span class="left"><span>Apr 21, 2014</span></span>
@@ -203,7 +211,8 @@
   <a href="/design/apps/epicflyer">
     <figure>
       <img alt="" src="/assets/works/epic.jpg">
-      <figcaption style="background-color:rgba(255,255,1,0.8)">
+      <span style="background-color:rgba(255,255,1,0.8)"></span>
+      <figcaption>
         <b>Epic Flyer</b>
         <p>iOS Game (incomplete)</p> 
         <span class="left"><span>Feb 03, 2014</span></span>
@@ -217,7 +226,8 @@
   <a href="/design/web/robotics" target="_blank">
     <figure>
       <img alt="" src="/assets/works/604robotics.jpg">
-      <figcaption style="background-color:rgba(251,182,19,0.8)">
+      <span style="background-color:rgba(251,182,19,0.8)"></span>
+      <figcaption>
         <b>604 Robotics</b>
         
         <span class="left"><span>Dec 03, 2013</span></span>
@@ -231,7 +241,8 @@
   <a href="/design/web/sfl">
     <figure>
       <img alt="" src="/assets/works/4.jpg">
-      <figcaption style="background-color:rgba(111,198,28,0.8)">
+      <span style="background-color:rgba(111,198,28,0.8)"></span>
+      <figcaption>
         <b>Speak For Life</b>
         <p>Promoting the importance of speech. Website, branding, etc.</p> 
         <span class="left"><span>Apr 08, 2013</span></span>
@@ -245,7 +256,8 @@
   <a href="/design/web/past">
     <figure>
       <img alt="" src="/assets/works/1.jpg">
-      <figcaption style="background-color:rgba(232,99,32,0.8)">
+      <span style="background-color:rgba(232,99,32,0.8)"></span>
+      <figcaption>
         <b>Past Web Projects</b>
         
         <span class="left"><span>Jan 01, 2013</span></span>
@@ -262,12 +274,24 @@
 </main>
 
 <script>
-function tileSize(){ 
+function tileSize(call){
+  var tileSize = window.getComputedStyle(document.getElementsByClassName("tile")[0]).getPropertyValue('width');
+
   for (i = 0; i < document.getElementsByClassName("tile").length ; i++ ){
-    document.getElementsByClassName("tile")[i].setAttribute("style","-webkit-animation-delay:"+(0.05*(i-1))+"s;-moz-animation-delay:"+(0.05*(i-1))+"s;-ms-animation-delay:"+(0.05*(i-1))+"s;animation-delay:"+(0.05*(i-1))+"s;");
-    document.getElementsByClassName("tile")[i].style.height = window.getComputedStyle(document.getElementsByClassName("tile")[i]).getPropertyValue('width');
+
+    var elem = document.getElementsByClassName("tile")[i]
+    elem.style.height = tileSize
+
+    if(call == "load"){
+      var anim = "animation-delay:"+(0.05*(i-1))+"s"
+      elem.setAttribute("style","-webkit-"+anim+";-moz-"+anim+";-ms-"+anim+";"+anim+";height:"+tileSize)
+    }
+
   }
-} document.onLoad = tileSize(); window.addEventListener("resize", tileSize); // execute
+} 
+
+document.onLoad = tileSize("load") 
+window.addEventListener("resize", tileSize) // execute
 </script>
 
 

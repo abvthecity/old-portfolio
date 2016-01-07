@@ -83,7 +83,8 @@
   <a href="/design/print/1kp2015">
     <figure>
       <img alt="" src="/assets/works/1kp2015.jpg">
-      <figcaption style="background-color:rgba(57,108,175,0.8)">
+      <span style="background-color:rgba(57,108,175,0.8)"></span>
+      <figcaption>
         <b>1000 Pitches 2015</b>
         <p>Spark SC event</p> 
         <span class="left"><span>Dec 12, 2015</span></span>
@@ -97,7 +98,8 @@
   <a href="/design/print/portfolio2015">
     <figure>
       <img alt="" src="/assets/works/2015.jpg">
-      <figcaption style="background-color:rgba(90,140,190,0.8)">
+      <span style="background-color:rgba(90,140,190,0.8)"></span>
+      <figcaption>
         <b>Portfolio 2015</b>
         <p>Physical booklet</p> 
         <span class="left"><span>Jun 03, 2015</span></span>
@@ -111,7 +113,8 @@
   <a href="/design/print/yb2015">
     <figure>
       <img alt="" src="/assets/works/yb2015.jpg">
-      <figcaption style="background-color:rgba(247,35,134,0.8)">
+      <span style="background-color:rgba(247,35,134,0.8)"></span>
+      <figcaption>
         <b>Lost in the World</b>
         <p>LEGEND / Yearbook 2015</p> 
         <span class="left"><span>May 12, 2015</span></span>
@@ -125,7 +128,8 @@
   <a href="/design/print/yb2014">
     <figure>
       <img alt="" src="/assets/works/5.jpg">
-      <figcaption style="background-color:rgba(107,63,122,0.8)">
+      <span style="background-color:rgba(107,63,122,0.8)"></span>
+      <figcaption>
         <b>Come Together</b>
         <p>LEGEND / Yearbook 2014</p> 
         <span class="left"><span>May 12, 2014</span></span>
@@ -139,7 +143,8 @@
   <a href="/design/print/helvetica">
     <figure>
       <img alt="" src="/assets/works/6.jpg">
-      <figcaption style="background-color:rgba(223,92,32,0.8)">
+      <span style="background-color:rgba(223,92,32,0.8)"></span>
+      <figcaption>
         <b>Helvetica Magazine</b>
         <p>Inspiring Leland students with graduating personal statements.</p> 
         <span class="left"><span>Apr 21, 2014</span></span>
@@ -156,12 +161,24 @@
 </main>
 
 <script>
-function tileSize(){ 
+function tileSize(call){
+  var tileSize = window.getComputedStyle(document.getElementsByClassName("tile")[0]).getPropertyValue('width');
+
   for (i = 0; i < document.getElementsByClassName("tile").length ; i++ ){
-    document.getElementsByClassName("tile")[i].setAttribute("style","-webkit-animation-delay:"+(0.05*(i-1))+"s;-moz-animation-delay:"+(0.05*(i-1))+"s;-ms-animation-delay:"+(0.05*(i-1))+"s;animation-delay:"+(0.05*(i-1))+"s;");
-    document.getElementsByClassName("tile")[i].style.height = window.getComputedStyle(document.getElementsByClassName("tile")[i]).getPropertyValue('width');
+
+    var elem = document.getElementsByClassName("tile")[i]
+    elem.style.height = tileSize
+
+    if(call == "load"){
+      var anim = "animation-delay:"+(0.05*(i-1))+"s"
+      elem.setAttribute("style","-webkit-"+anim+";-moz-"+anim+";-ms-"+anim+";"+anim+";height:"+tileSize)
+    }
+
   }
-} document.onLoad = tileSize(); window.addEventListener("resize", tileSize); // execute
+} 
+
+document.onLoad = tileSize("load") 
+window.addEventListener("resize", tileSize) // execute
 </script>
 
 

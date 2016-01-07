@@ -83,7 +83,8 @@
   <a href="/design/web/journo" target="_blank">
     <figure>
       <img alt="" src="/assets/works/7.jpg">
-      <figcaption style="background-color:rgba(198,29,127,0.8)">
+      <span style="background-color:rgba(198,29,127,0.8)"></span>
+      <figcaption>
         <b>Charger Account</b>
         <p>Leland High School's official online newspaper.</p> 
         <span class="left"><span>Jan 04, 2015</span></span>
@@ -97,7 +98,8 @@
   <a href="/design/web/paradata">
     <figure>
       <img alt="" src="/assets/works/8.jpg">
-      <figcaption style="background-color:rgba(44,85,239,0.8)">
+      <span style="background-color:rgba(44,85,239,0.8)"></span>
+      <figcaption>
         <b>Paradata Portal</b>
         <p>User experience redesign of database portal using Material Design.</p> 
         <span class="left"><span>Aug 13, 2014</span></span>
@@ -111,7 +113,8 @@
   <a href="/design/web/robotics" target="_blank">
     <figure>
       <img alt="" src="/assets/works/604robotics.jpg">
-      <figcaption style="background-color:rgba(251,182,19,0.8)">
+      <span style="background-color:rgba(251,182,19,0.8)"></span>
+      <figcaption>
         <b>604 Robotics</b>
         
         <span class="left"><span>Dec 03, 2013</span></span>
@@ -125,7 +128,8 @@
   <a href="/design/web/sfl">
     <figure>
       <img alt="" src="/assets/works/4.jpg">
-      <figcaption style="background-color:rgba(111,198,28,0.8)">
+      <span style="background-color:rgba(111,198,28,0.8)"></span>
+      <figcaption>
         <b>Speak For Life</b>
         <p>Promoting the importance of speech. Website, branding, etc.</p> 
         <span class="left"><span>Apr 08, 2013</span></span>
@@ -139,7 +143,8 @@
   <a href="/design/web/past">
     <figure>
       <img alt="" src="/assets/works/1.jpg">
-      <figcaption style="background-color:rgba(232,99,32,0.8)">
+      <span style="background-color:rgba(232,99,32,0.8)"></span>
+      <figcaption>
         <b>Past Web Projects</b>
         
         <span class="left"><span>Jan 01, 2013</span></span>
@@ -156,12 +161,24 @@
 </main>
 
 <script>
-function tileSize(){ 
+function tileSize(call){
+  var tileSize = window.getComputedStyle(document.getElementsByClassName("tile")[0]).getPropertyValue('width');
+
   for (i = 0; i < document.getElementsByClassName("tile").length ; i++ ){
-    document.getElementsByClassName("tile")[i].setAttribute("style","-webkit-animation-delay:"+(0.05*(i-1))+"s;-moz-animation-delay:"+(0.05*(i-1))+"s;-ms-animation-delay:"+(0.05*(i-1))+"s;animation-delay:"+(0.05*(i-1))+"s;");
-    document.getElementsByClassName("tile")[i].style.height = window.getComputedStyle(document.getElementsByClassName("tile")[i]).getPropertyValue('width');
+
+    var elem = document.getElementsByClassName("tile")[i]
+    elem.style.height = tileSize
+
+    if(call == "load"){
+      var anim = "animation-delay:"+(0.05*(i-1))+"s"
+      elem.setAttribute("style","-webkit-"+anim+";-moz-"+anim+";-ms-"+anim+";"+anim+";height:"+tileSize)
+    }
+
   }
-} document.onLoad = tileSize(); window.addEventListener("resize", tileSize); // execute
+} 
+
+document.onLoad = tileSize("load") 
+window.addEventListener("resize", tileSize) // execute
 </script>
 
 

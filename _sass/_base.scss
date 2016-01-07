@@ -367,6 +367,14 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
             position:absolute;
         }
 
+        > span {
+            display:block;
+            position:absolute;
+            left:0;right:0;top:0;bottom:0;
+            opacity:0.2;
+            z-index:0;
+        }
+
         figcaption {
             display:table-cell;
             width:100%;
@@ -377,6 +385,7 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
             z-index:3;
             padding:24px;
             opacity:0;
+
             b { font-size:1.5em; text-transform:uppercase; }
             p { font-size:1em; font-style:italic; padding-top:16px; }
             > span {
@@ -398,6 +407,7 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
 
         }
         figcaption.show, &:hover figcaption { opacity:1; }
+        > span.show, &:hover > span { z-index:2;opacity:1 }
     }
     &.dk figure {
         background-color:#FFF;
