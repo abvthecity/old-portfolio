@@ -404,7 +404,7 @@ section p, footer p {
   font-family: Charter, Georgia, Times, "Times New Roman", serif;
   display: block; }
 
-section p.sans, footer p.sans {
+section p.sans, footer p.sans, section.sans p, footer.sans p {
   font-family: "Proxima Nova", "proxima-nova", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, Avenir, Verdana, Sans-serif; }
 
 section p img, footer p img {

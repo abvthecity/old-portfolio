@@ -257,7 +257,7 @@ section p, footer p {
     display:block;
 }
 
-section p.sans, footer p.sans {
+section p.sans, footer p.sans, section.sans p, footer.sans p {
     font-family: $base-font-family;
 }
 

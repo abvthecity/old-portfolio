@@ -9,7 +9,7 @@ github_username:  ninjiangstar
 
 permalink: /:categories/:title
 
-nav: [Code, Design, Misc]
+nav: [Code, Design, Misc, Blog]
 
 # Build settings
 markdown: kramdown
