@@ -132,7 +132,8 @@ function tileSize(call){
   }
 } 
 
-document.onLoad = tileSize("load") 
+document.onLoad = tileSize("load")
+window.onLoad = tileSize("load")
 window.addEventListener("resize", tileSize) // execute
 </script>
 
