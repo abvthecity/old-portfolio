@@ -88,7 +88,7 @@
 
 <li class="tile dk">
   <a href="/misc/art/sketches">
-    <figure style="background-color:rgba(80,80,80,1)">
+    <figure style="background-color:rgba(80,80,80,0.8)">
       <img alt="" src="/assets/works/sketches.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -107,8 +107,23 @@
   </section>
 </main>
 
+<script src="/js/echo.js"></script>
 <script>
-function tileSizeSq(call){
+
+function init(){
+  echo.init({
+    offset: 100,
+    throttle: 250,
+    unload: false,
+    callback: function(element, op) {
+      if(op === 'load') {
+        element.style.opacity = "1";
+      }
+    }
+  });
+}
+
+function tileSizeSq(call,callback){
   var tileSize = window.getComputedStyle(document.getElementsByClassName("tile")[0]).getPropertyValue('width')
   var tileCount = document.getElementsByClassName("tile").length
 
@@ -126,13 +141,26 @@ function tileSizeSq(call){
       elem.style["-webkit-animation-delay"] = anim
       elem.style["-moz-animation-delay"] = anim
       elem.style.animationDelay = anim
+
+      var img = elem.getElementsByTagName("img")[0]
+      if(img) {
+        img.setAttribute("data-echo",img.getAttribute("src"))
+        img.setAttribute("src","")
+        img.style.opacity = "0"
+        img.style.WebkitTransition = "opacity 0.35s cubic-bezier(0.215, 0.61, 0.355, 1)"
+      }
     }
+
+    callback()
   }
 } 
 
-window.onLoad = tileSizeSq("load")
-document.onLoad = tileSizeSq("load")
+window.onLoad = tileSizeSq("load",init)
+document.onLoad = tileSizeSq()
 window.addEventListener("resize", tileSizeSq) // execute
+
+window.onscroll = echo.render
+
 </script>
 
 

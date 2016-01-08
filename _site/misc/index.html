@@ -96,7 +96,7 @@
 
 <li class="tile">
   <a href="/misc/photo/china2015" target="_blank">
-    <figure style="background-color:rgba(200,130,60,1)">
+    <figure style="background-color:rgba(200,130,60,0.8)">
       <img alt="" src="/assets/works/china.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -111,7 +111,7 @@
 
 <li class="tile">
   <a href="/misc/code/sinewave">
-    <figure style="background-color:rgba(32,214,154,1)">
+    <figure style="background-color:rgba(32,214,154,0.8)">
       <img alt="" src="/assets/works/sine.gif">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -126,7 +126,7 @@
 
 <li class="tile dk">
   <a href="/misc/code/geoflower">
-    <figure style="background-color:rgba(112,73,18,1)">
+    <figure style="background-color:rgba(112,73,18,0.8)">
       <img alt="" src="/assets/works/tree.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -141,7 +141,7 @@
 
 <li class="tile dk">
   <a href="/misc/photo/vsco" target="_blank">
-    <figure style="background-color:rgba(158,112,46,1)">
+    <figure style="background-color:rgba(158,112,46,0.8)">
       <img alt="" src="/assets/works/9.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -156,7 +156,7 @@
 
 <li class="tile">
   <a href="/misc/photo/yb2015" target="_blank">
-    <figure style="background-color:rgba(41,184,225,1)">
+    <figure style="background-color:rgba(41,184,225,0.8)">
       <img alt="" src="/assets/works/yb2015_photo.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -171,7 +171,7 @@
 
 <li class="tile dk">
   <a href="/misc/code/mitosis">
-    <figure style="background-color:rgba(237,23,79,1)">
+    <figure style="background-color:rgba(237,23,79,0.8)">
       <img alt="" src="/assets/works/mitosis.gif">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -186,7 +186,7 @@
 
 <li class="tile dk">
   <a href="/misc/art/sketches">
-    <figure style="background-color:rgba(80,80,80,1)">
+    <figure style="background-color:rgba(80,80,80,0.8)">
       <img alt="" src="/assets/works/sketches.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -205,8 +205,23 @@
   </section>
 </main>
 
+<script src="/js/echo.js"></script>
 <script>
-function tileSizeSq(call){
+
+function init(){
+  echo.init({
+    offset: 100,
+    throttle: 250,
+    unload: false,
+    callback: function(element, op) {
+      if(op === 'load') {
+        element.style.opacity = "1";
+      }
+    }
+  });
+}
+
+function tileSizeSq(call,callback){
   var tileSize = window.getComputedStyle(document.getElementsByClassName("tile")[0]).getPropertyValue('width')
   var tileCount = document.getElementsByClassName("tile").length
 
@@ -224,13 +239,26 @@ function tileSizeSq(call){
       elem.style["-webkit-animation-delay"] = anim
       elem.style["-moz-animation-delay"] = anim
       elem.style.animationDelay = anim
+
+      var img = elem.getElementsByTagName("img")[0]
+      if(img) {
+        img.setAttribute("data-echo",img.getAttribute("src"))
+        img.setAttribute("src","")
+        img.style.opacity = "0"
+        img.style.WebkitTransition = "opacity 0.35s cubic-bezier(0.215, 0.61, 0.355, 1)"
+      }
     }
+
+    callback()
   }
 } 
 
-window.onLoad = tileSizeSq("load")
-document.onLoad = tileSizeSq("load")
+window.onLoad = tileSizeSq("load",init)
+document.onLoad = tileSizeSq()
 window.addEventListener("resize", tileSizeSq) // execute
+
+window.onscroll = echo.render
+
 </script>
 
 

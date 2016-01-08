@@ -32,7 +32,7 @@ layout: default
 {% for post in site.posts %}{% if post.show == true %}{% if page.category == post.categories or post.categories.first == page.category.last or page.home == true %}{% assign _r = post.rgb[0] | times: 0.299 | divided_by: 256 %}{% assign _g = post.rgb[1] | times: 0.587 | divided_by: 256 %}{% assign _b = post.rgb[2] | times: 0.114 | divided_by: 256 %}{% assign _rgb = _r | plus: _g | plus: _b %}
 <li class="tile{% if _rgb < 0.55 %} dk{% endif %}">
   <a href="{{ post.url | prepend: site.baseurl }}"{% if post.redir %} target="_blank"{% endif %}>
-    <figure style="background-color:rgba({{ post.rgb | join: ',' }},1)">
+    <figure style="background-color:rgba({{ post.rgb | join: ',' }},0.8)">
       <img alt="" src="{{ post.image }}">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -51,8 +51,23 @@ layout: default
   </section>
 </main>
 
+<script src="/js/echo.js"></script>
 <script>
-function tileSizeSq(call){
+
+function init(){
+  echo.init({
+    offset: 100,
+    throttle: 250,
+    unload: false,
+    callback: function(element, op) {
+      if(op === 'load') {
+        element.style.opacity = "1";
+      }
+    }
+  });
+}
+
+function tileSizeSq(call,callback){
   var tileSize = window.getComputedStyle(document.getElementsByClassName("tile")[0]).getPropertyValue('width')
   var tileCount = document.getElementsByClassName("tile").length
 
@@ -70,11 +85,24 @@ function tileSizeSq(call){
       elem.style["-webkit-animation-delay"] = anim
       elem.style["-moz-animation-delay"] = anim
       elem.style.animationDelay = anim
+
+      var img = elem.getElementsByTagName("img")[0]
+      if(img) {
+        img.setAttribute("data-echo",img.getAttribute("src"))
+        img.setAttribute("src","")
+        img.style.opacity = "0"
+        img.style.WebkitTransition = "opacity 0.35s cubic-bezier(0.215, 0.61, 0.355, 1)"
+      }
     }
+
+    callback()
   }
 } 
 
-window.onLoad = tileSizeSq("load")
-document.onLoad = tileSizeSq("load")
+window.onLoad = tileSizeSq("load",init)
+document.onLoad = tileSizeSq()
 window.addEventListener("resize", tileSizeSq) // execute
+
+window.onscroll = echo.render
+
 </script>

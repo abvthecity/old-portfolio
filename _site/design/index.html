@@ -96,7 +96,7 @@
 
 <li class="tile dk">
   <a href="/design/print/1kp2015">
-    <figure style="background-color:rgba(57,108,175,1)">
+    <figure style="background-color:rgba(57,108,175,0.8)">
       <img alt="" src="/assets/works/1kp2015.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -111,7 +111,7 @@
 
 <li class="tile">
   <a href="/design/apps/pinpoint">
-    <figure style="background-color:rgba(200,200,200,1)">
+    <figure style="background-color:rgba(200,200,200,0.8)">
       <img alt="" src="/assets/works/pinpoint.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -126,7 +126,7 @@
 
 <li class="tile dk">
   <a href="/design/print/portfolio2015">
-    <figure style="background-color:rgba(90,140,190,1)">
+    <figure style="background-color:rgba(90,140,190,0.8)">
       <img alt="" src="/assets/works/2015.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -141,7 +141,7 @@
 
 <li class="tile dk">
   <a href="/design/print/yb2015">
-    <figure style="background-color:rgba(247,35,134,1)">
+    <figure style="background-color:rgba(247,35,134,0.8)">
       <img alt="" src="/assets/works/yb2015.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -156,7 +156,7 @@
 
 <li class="tile dk">
   <a href="/design/web/journo" target="_blank">
-    <figure style="background-color:rgba(198,29,127,1)">
+    <figure style="background-color:rgba(198,29,127,0.8)">
       <img alt="" src="/assets/works/7.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -171,7 +171,7 @@
 
 <li class="tile dk">
   <a href="/design/web/paradata">
-    <figure style="background-color:rgba(44,85,239,1)">
+    <figure style="background-color:rgba(44,85,239,0.8)">
       <img alt="" src="/assets/works/8.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -186,7 +186,7 @@
 
 <li class="tile dk">
   <a href="/design/print/yb2014">
-    <figure style="background-color:rgba(107,63,122,1)">
+    <figure style="background-color:rgba(107,63,122,0.8)">
       <img alt="" src="/assets/works/5.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -201,7 +201,7 @@
 
 <li class="tile dk">
   <a href="/design/print/helvetica">
-    <figure style="background-color:rgba(223,92,32,1)">
+    <figure style="background-color:rgba(223,92,32,0.8)">
       <img alt="" src="/assets/works/6.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -216,7 +216,7 @@
 
 <li class="tile">
   <a href="/design/apps/epicflyer">
-    <figure style="background-color:rgba(255,255,1,1)">
+    <figure style="background-color:rgba(255,255,1,0.8)">
       <img alt="" src="/assets/works/epic.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -231,7 +231,7 @@
 
 <li class="tile">
   <a href="/design/web/robotics" target="_blank">
-    <figure style="background-color:rgba(251,182,19,1)">
+    <figure style="background-color:rgba(251,182,19,0.8)">
       <img alt="" src="/assets/works/604robotics.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -246,7 +246,7 @@
 
 <li class="tile">
   <a href="/design/web/sfl">
-    <figure style="background-color:rgba(111,198,28,1)">
+    <figure style="background-color:rgba(111,198,28,0.8)">
       <img alt="" src="/assets/works/4.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -261,7 +261,7 @@
 
 <li class="tile dk">
   <a href="/design/web/past">
-    <figure style="background-color:rgba(232,99,32,1)">
+    <figure style="background-color:rgba(232,99,32,0.8)">
       <img alt="" src="/assets/works/1.jpg">
       <span style="background-color:inherit;"></span>
       <figcaption>
@@ -280,8 +280,23 @@
   </section>
 </main>
 
+<script src="/js/echo.js"></script>
 <script>
-function tileSizeSq(call){
+
+function init(){
+  echo.init({
+    offset: 100,
+    throttle: 250,
+    unload: false,
+    callback: function(element, op) {
+      if(op === 'load') {
+        element.style.opacity = "1";
+      }
+    }
+  });
+}
+
+function tileSizeSq(call,callback){
   var tileSize = window.getComputedStyle(document.getElementsByClassName("tile")[0]).getPropertyValue('width')
   var tileCount = document.getElementsByClassName("tile").length
 
@@ -299,13 +314,26 @@ function tileSizeSq(call){
       elem.style["-webkit-animation-delay"] = anim
       elem.style["-moz-animation-delay"] = anim
       elem.style.animationDelay = anim
+
+      var img = elem.getElementsByTagName("img")[0]
+      if(img) {
+        img.setAttribute("data-echo",img.getAttribute("src"))
+        img.setAttribute("src","")
+        img.style.opacity = "0"
+        img.style.WebkitTransition = "opacity 0.35s cubic-bezier(0.215, 0.61, 0.355, 1)"
+      }
     }
+
+    callback()
   }
 } 
 
-window.onLoad = tileSizeSq("load")
-document.onLoad = tileSizeSq("load")
+window.onLoad = tileSizeSq("load",init)
+document.onLoad = tileSizeSq()
 window.addEventListener("resize", tileSizeSq) // execute
+
+window.onscroll = echo.render
+
 </script>
 
 

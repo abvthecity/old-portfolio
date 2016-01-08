@@ -589,7 +589,7 @@ section p.neg:after, footer p.neg:after {
     .tile figure figcaption.show, .tile figure:hover figcaption {
       opacity: 1; }
     .tile figure > span.show, .tile figure:hover > span {
-      opacity: 0.8; }
+      opacity: 1; }
   .tile.dk figure {
     background-color: #FFF;
     color: #FFF;
