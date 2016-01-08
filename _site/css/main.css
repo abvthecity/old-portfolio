@@ -43,9 +43,9 @@ table {
 
 /* END Boilerplate */
 * {
-  -webkit-transition-property: margin, padding, opacity, background-color, border-radius, border;
-  -moz-transition-property: margin, padding, opacity, background-color, border-radius, border;
-  transition-property: margin, padding, opacity, background-color, border-radius, border;
+  -webkit-transition-property: margin, padding, opacity, background-color, border;
+  -moz-transition-property: margin, padding, opacity, background-color, border;
+  transition-property: margin, padding, opacity, background-color, border;
   -webkit-transition-duration: 0.35s;
   -moz-transition-duration: 0.35s;
   transition-duration: 0.35s;

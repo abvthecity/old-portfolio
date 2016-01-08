@@ -283,14 +283,14 @@
 <script src="/js/echo.js"></script>
 <script>
 
-function init(){
+init = function(){
   echo.init({
     offset: 100,
     throttle: 250,
     unload: false,
     callback: function(element, op) {
       if(op === 'load') {
-        element.style.opacity = "1";
+       element.style.opacity = "1";
       }
     }
   });
@@ -320,7 +320,6 @@ function tileSizeSq(call,callback){
         img.setAttribute("data-echo",img.getAttribute("src"))
         img.setAttribute("src","")
         img.style.opacity = "0"
-        img.style.WebkitTransition = "opacity 0.35s cubic-bezier(0.215, 0.61, 0.355, 1)"
       }
     }
 
@@ -333,6 +332,7 @@ document.onLoad = tileSizeSq()
 window.addEventListener("resize", tileSizeSq) // execute
 
 window.onscroll = echo.render
+window.onresize = echo.render
 
 </script>
 
