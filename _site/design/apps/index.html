@@ -130,12 +130,15 @@ init = function(){
     offset: 100,
     throttle: 250,
     unload: false,
+    debounce: false,
     callback: function(element, op) {
       if(op === 'load') {
        element.style.opacity = "1";
       }
     }
   });
+
+  echo.render
 }
 
 function tileSizeSq(call,callback){
@@ -173,8 +176,8 @@ window.onLoad = tileSizeSq("load",init)
 document.onLoad = tileSizeSq()
 window.addEventListener("resize", tileSizeSq) // execute
 
-window.onscroll = echo.render
 window.onresize = echo.render
+window.onscroll = echo.render
 
 </script>
 

@@ -20,7 +20,7 @@ table { border-collapse:collapse;border-spacing:0 }
 /* END Boilerplate */
 
 * {
-    @include webkit(transition-property, (margin, padding, opacity, background-color, border));
+    @include webkit(transition-property, (margin, padding, opacity, background-color, color, border));
     @include webkit(transition-duration, 0.35s);
     @include webkit(transition-timing-function, cubic-bezier(0.215, 0.61, 0.355, 1));
     @include webkit(animation-fill-mode, both);
@@ -360,7 +360,7 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
         text-decoration:none;
         margin:12px;
         overflow:hidden;
-        border-radius:5px;
+        @include webkit(border-radius, 5px);
         @include webkit(transition, all 0.35s cubic-bezier(0.215, 0.61, 0.355, 1));
         
     }
@@ -371,7 +371,7 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
         display:table;
         font-size:1.2em;
         word-break:keep-all;
-        border-radius:inherit;
+        @include webkit(border-radius,inherit);
         width:100%;
         height:100%;
 
@@ -394,7 +394,7 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
             display:table-cell;
             width:100%;
             position:relative;
-            border-radius:inherit;
+            @include webkit(border-radius,inherit);
             vertical-align:middle;
             text-align:center;
             z-index:3;
@@ -416,7 +416,7 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
                     display:inline-block;
                     height:11px;
                     padding:2px 4px;
-                    border-radius:3px;
+                    @include webkit(border-radius,3px);
                 }
             }
 
@@ -441,7 +441,7 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
     padding:9px 16px;
     margin:8px 0;
     border:0px;
-    border-radius:3px;
+    @include webkit(border-radius,5px);
     text-transform: uppercase;
 }
 
@@ -449,9 +449,8 @@ a.sub {
     display:inline-block;
     color:#E85676;
     border:2px solid #E85676;
-    border-radius:10px;
-    padding:16px 20px;
-    margin-top:10px;
+    @include webkit(border-radius,5px);
+    padding:14px 20px;
     text-decoration:none;
     font-size:24px;
     line-height:1em;
