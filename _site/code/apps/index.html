@@ -92,23 +92,15 @@
   </section>
 </main>
 
-<script src="/js/echo.js"></script>
 <script>
-
-init = function(){
-  echo.init({
-    offset: 100,
-    throttle: 250,
-    unload: false,
-    debounce: false,
-    callback: function(element, op) {
-      if(op === 'load') {
-       element.style.opacity = "1";
-      }
-    }
-  });
-
-  echo.render
+function init() { // defer image loading
+  var img = document.getElementsByTagName('img');
+  for (var i=0; i<img.length; i++) {
+    if(img[i].getAttribute('data-src')) {
+      img[i].setAttribute('src',img[i].getAttribute('data-src'));
+      img[i].style.opacity = "1"
+    } 
+  } 
 }
 
 function tileSizeSq(call,callback){
@@ -132,7 +124,7 @@ function tileSizeSq(call,callback){
 
       var img = elem.getElementsByTagName("img")[0]
       if(img) {
-        img.setAttribute("data-echo",img.getAttribute("src"))
+        img.setAttribute("data-src",img.getAttribute("src"))
         img.setAttribute("src","")
         img.style.opacity = "0"
       }
@@ -142,12 +134,9 @@ function tileSizeSq(call,callback){
   }
 } 
 
-window.onLoad = tileSizeSq("load",init)
+window.onLoad = tileSizeSq("load", init)
 document.onLoad = tileSizeSq()
 window.addEventListener("resize", tileSizeSq) // execute
-
-window.onresize = echo.render
-window.onscroll = echo.render
 
 </script>
 
