@@ -350,6 +350,12 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
     @include webkit(animation, tileshift 0.8s cubic-bezier(0.215, 0.61, 0.355, 1));
     @include webkit(animation-fill-mode, both);
     z-index:1;
+
+    &:before {
+        content:'';
+        display:block;
+        padding-bottom:100%;
+    }
     
     &:hover {z-index:2;opacity:1;}
 
@@ -636,7 +642,6 @@ nav {
 
 .tile {
     width: 1 / 2 * 100%;
-    height:180px;
 
     > a:hover, > div:hover {
         @include webkit(transform,scale(1,1));

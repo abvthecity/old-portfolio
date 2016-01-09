@@ -510,6 +510,10 @@ section p.neg:after, footer p.neg:after {
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
   z-index: 1; }
+  .tile:before {
+    content: '';
+    display: block;
+    padding-bottom: 100%; }
   .tile:hover {
     z-index: 2;
     opacity: 1; }
@@ -779,8 +783,7 @@ figure.expanded figcaption {
       display: none !important; }
 
   .tile {
-    width: 50%;
-    height: 180px; }
+    width: 50%; }
     .tile > a:hover, .tile > div:hover {
       -webkit-transform: scale(1, 1);
       -moz-transform: scale(1, 1);

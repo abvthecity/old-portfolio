@@ -74,7 +74,7 @@
 
 <main>
   <section>
-    <div class="s-pad">
+    <div class="s-pad bottom">
 
       <h1><span style="color:#AAA"><a href="/misc">misc</a> / </span>Code</h1>
 
@@ -168,51 +168,37 @@
 </main>
 
 <script>
-function init() { // defer image loading
-  var img = document.getElementsByTagName('img');
+function init(img) { // defer image loading
   for (var i=0; i<img.length; i++) {
     if(img[i].getAttribute('data-src')) {
-      img[i].setAttribute('src',img[i].getAttribute('data-src'));
+      img[i].setAttribute('src',img[i].getAttribute('data-src'))
       img[i].style.opacity = "1"
     } 
   } 
 }
 
-function tileSizeSq(call,callback){
-  var tileSize = window.getComputedStyle(document.getElementsByClassName("tile")[0]).getPropertyValue('width')
-  var tileCount = document.getElementsByClassName("tile").length
+function tileAppear(callback){
 
-  for (i = 0; i < tileCount; i++ ){
-
+  for(i = 0; i < document.getElementsByClassName("tile").length; i++){
+    var anim = (0.05*i)+"s"
     var elem = document.getElementsByClassName("tile")[i]
-    elem.style.height = tileSize
 
-  }
+    elem.style["-webkit-animation-delay"] = anim
+    elem.style["-moz-animation-delay"] = anim
+    elem.style.animationDelay = anim
 
-  if(call == "load"){
-    for(i = 0; i < tileCount; i++){
-      var anim = (0.05*i)+"s"
-      var elem = document.getElementsByClassName("tile")[i]
-      elem.style["-webkit-animation-delay"] = anim
-      elem.style["-moz-animation-delay"] = anim
-      elem.style.animationDelay = anim
-
-      var img = elem.getElementsByTagName("img")[0]
-      if(img) {
-        img.setAttribute("data-src",img.getAttribute("src"))
-        img.setAttribute("src","")
-        img.style.opacity = "0"
-      }
+    var img = elem.getElementsByTagName("img")[0]
+    if(img) {
+      img.setAttribute("data-src",img.getAttribute("src"))
+      img.setAttribute("src","")
+      img.style.opacity = "0"
     }
-
-    callback()
   }
+
+  callback(document.getElementsByTagName("img"))
 } 
 
-window.onLoad = tileSizeSq("load", init)
-document.onLoad = tileSizeSq()
-window.addEventListener("resize", tileSizeSq) // execute
-
+window.onLoad = tileAppear(init)
 </script>
 
 
