@@ -233,7 +233,6 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 ***** NAVIGATION *****
 ******************* */
 nav {
-  position: relative;
   padding: 16px 40px 16px 40px;
   text-transform: uppercase;
   z-index: 999;
@@ -243,6 +242,10 @@ nav {
     -webkit-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     -moz-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+    nav.d a::after {
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
   nav:after {
     content: '';
     display: block;

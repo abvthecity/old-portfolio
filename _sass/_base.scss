@@ -120,13 +120,19 @@ input:-moz-placeholder,textarea:-moz-placeholder { color: rgba(0,0,0,0.3); }
 ******************* */
 
 nav {
-    position:relative;
     padding:16px 40px 16px 40px;
     text-transform:uppercase;
     z-index:999;
     margin-bottom:-1px;
 
-    &.d { color:#FFF; @include webkit(text-shadow, 0 1px 3px rgba(0,0,0,0.2)); }
+    &.d { 
+        color:#FFF; 
+        @include webkit(text-shadow, 0 1px 3px rgba(0,0,0,0.2)); 
+        a::after {
+            @include webkit(box-shadow, 0 1px 3px rgba(0,0,0,0.2)); 
+        }
+    }
+
     &:after { content:'';display:block;clear:both;}
 
     a {
