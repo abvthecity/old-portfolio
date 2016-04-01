@@ -4,15 +4,9 @@ layout: default
 
 <main>
   <section>
-    <div class="s-pad bottom">
+    <div class="s-pad">
 {% if page.home != true %}
       <h1>{% if page.category.size > 1 %}<span style="color:#AAA"><a href="/{{ page.category[0] }}">{{ page.category[0] }}</a> / </span>{% endif %}{{page.title}}</h1>
-
-      {% if page.sub.size > 0 %}
-      {% for each in page.sub %}
-        <a href="/{{ page.category | join '/' }}/{{ each | downcase }}" class="sub">{{ each | capitalize }}</a>
-      {% endfor %}
-      {% endif %}
       </div>
       <div class="s-pad bottom s-tile">
 {% endif %}
