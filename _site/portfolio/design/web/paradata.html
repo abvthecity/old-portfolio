@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <title>Paradata Portal</title>
+  <meta name="description" content="Andrew's Portfolio">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://use.typekit.net/tgi3xpz.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+  <link rel="canonical" href="http://andrewjiang.com/portfolio/design/web/paradata">
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  
+
+</head>
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46842926-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<header class="site-header">
+
+<nav class="d" style="background-color:rgb(23,65,109)">
+  <ul>
+    <li><a href="/" data-title="Andrew Jiang">Andrew Jiang</a></li>
+    <li><a href="/hello/resume" target="_blank" data-title="Résumé">Résumé</a>
+      <ul><li><a href="/hello">About</a></li><li><a href="/hello/email" target="_blank">Email me</a></li><li><a href="/hello/linkedin" target="_blank">LinkedIn</a></li><li><a href="/hello/twitter" target="_blank">Twitter</a></li></ul>
+    </li>
+    
+    <li><a href="/code" data-title="code">Code</a>
+      <ul>
+      
+      <li><a href="/code"><b>See more...</b></a></li>
+      </ul>
+    </li>
+    
+    <li><a href="/design" data-title="design">Design</a>
+      <ul>
+      
+      <li><a href="/design"><b>See more...</b></a></li>
+      </ul>
+    </li>
+    
+    <li><a href="/misc" data-title="misc">Misc</a>
+      <ul>
+      
+      <li><a href="/misc"><b>See more...</b></a></li>
+      </ul>
+    </li>
+    
+    <li><a href="/blog" data-title="blog">Blog</a>
+      <ul>
+      
+      <li><a href="/blog"><b>See more...</b></a></li>
+      </ul>
+    </li>
+    
+
+    <li><a href="/hello/github" data-title="Github" target="_blank">Github</a></li>
+  </ul>
+</nav>
+
+</header>
+
+
+<main>
+<section style="background-color:rgb(23,65,109)">
+	<div class="s-pad">
+		<div class="title-padding">
+			<h1 style="color:#FFF">Paradata Portal</h1>
+			<div class="sub" style="color:#FFF">June 2014 — August 2014</div>
+			<div class="sub-2" style="color:#FFF">Andrew Jiang (Web Design Intern)</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="s-pad">
+		<div class="content">
+			<p><b style="font-size:120%">I walked into my first day</b> at <a href="http://paradata.io">Paradata</a> when the small company had just begun moving from Willow Glen to a larger space in Downtown SJ. I was not only introduced to the team, I had to also build my own desk. Once settled, I worked on revising the homepage of Paradata’s website layout and structure and revising the web Portal design (for navigating and managing large databases).</p>
+			<p>James, Director of Products, sitting in his swiveling office chair, wearing a plaid shirt and jeans, playing Led Zeppelin with Spotify on his red Jawbone boombox, airdropped to me his Portal design in an Illustrator file. Since Google just released Material Design, I wanted to revise the design to adapt to the upcoming Android standard made by Matías Duarte. I chose to do this because I admired the design language Duarte created, and I knew it suited the project well, especially since a mobile version was in mind. This was the result (version 1):</p>
+			<p class="neg"><img src="/assets/projects/paradata/original.jpg" alt="" style="float:left;"><span class="right-image-caption"><b>Version 1:</b> First redesign of the Portal with Material Design.</span></p>
+			<p>I spent a week trying to optimize the communication of the design, creating certain rules and moving objects around for both the desktop and mobile versions. We tried implementing breadcrumbs, for example, but the mobile screen wouldn’t allow for that interface. The structure of the database system was also too complicated, added to the hidden (and inefficient) functionality. I found myself essentially making minimal improvements to the structure. I wouldn’t have any of that.</p>
+			<p>Software Engineer Kiavash and I stepped into a sun-flooded room with a giant whiteboard wallpaper on one side. We began to brainstorm. How can we make the workflow more efficient? How would we make updates more apparent, and navigation more understandable? That’s when I had an epiphany: tagged search.</p>
+			<p class="neg"><img src="/assets/projects/paradata/tagged.png" alt=""></p>
+			<p>I remembered this as a feature I use all the time on Gmail to find hidden emails from centuries ago. With large databases like the ones Paradata was going to handle, tagged search will filter through everything in a breeze. On top of that, I can create toggles that integrate with the same search bar, so that the functionality will be centralized, familiar, and easy to learn. The design will also make the navigation adaptable to the client’s own workflow and database design. Kiavash and I worked together to reach this consensus, and I immediately began to develop the HTML wireframe of the design.</p>
+			<p>For the front-end side of development, I had to think ahead. I had to develop the entire thing fluid and <i>modularly</i>. This is to ensure that future cross-platform projects using the same elements can be more frugal: the user shouldn’t have to load something he or she doesn’t need. Each element—input, sidebar, table, popups, etc— are self-dependent. To ensure future implementability, I also created an entire documentation for each element. The final designs are shown below:</p>
+		</div>
+	</div>
+	<div class="s-pad bottom">
+		<div class="content">
+			<div class="image-big"><p class="neg"><img src="/assets/projects/paradata/screen.png" alt=""></p></div>
+			<p>*note: the previous is a direct screenshot of the HTML prototype. The following collection is a batch export of an Illustrator file, therefore alignment may be off but have been fixed on the actual product. Also, the final Illustrator design is not completely similar to the final prototype. Some differences include certain minor colors, sizes, and positioning differences that (personally) make great improvements to the user interface (some of which can be seen on the screenshot above). Animations and other interactions for the project's elements are not represented on this gallery.</p>
+			<div class="image-big">
+				<p class="neg"><img src="/assets/projects/paradata/new-01.jpg" alt=""></p>
+				<p class="neg"><img src="/assets/projects/paradata/new-02.jpg" alt=""></p>
+				<p class="neg"><img src="/assets/projects/paradata/new-03.jpg" alt=""></p>
+				<p class="neg"><img src="/assets/projects/paradata/new-04.jpg" alt=""></p>
+				<p class="neg"><img src="/assets/projects/paradata/new-05.jpg" alt=""></p>
+				<p class="neg"><img src="/assets/projects/paradata/new-06.jpg" alt=""></p>
+				<p class="neg"><img src="/assets/projects/paradata/new-07.jpg" alt=""></p>
+				<p class="neg"><img src="/assets/projects/paradata/new-08.jpg" alt=""></p>
+				<p class="neg"><img src="/assets/projects/paradata/new-09.jpg" alt=""></p>
+			</div>
+			<p class="neg"><img src="/assets/projects/paradata/new-10.jpg" alt="" style="width:400px"></p>
+			<p class="neg"><img src="/assets/projects/paradata/new-11.jpg" alt="" style="width:400px"></p>
+			<p class="neg"><img src="/assets/projects/paradata/new-12.jpg" alt="" style="width:400px"></p>
+			<p class="neg"><img src="/assets/projects/paradata/new-13.jpg" alt="" style="width:400px"></p>
+			<p class="neg"><img src="/assets/projects/paradata/new-14.jpg" alt="" style="width:400px"></p>
+			<p class="neg"><img src="/assets/projects/paradata/new-15.jpg" alt="" style="width:400px"></p>
+			<p class="neg"><img src="/assets/projects/paradata/new-16.jpg" alt="" style="width:400px"></p>
+			<p class="neg"><img src="/assets/projects/paradata/new-17.jpg" alt="" style="width:400px"></p>
+		</div>
+	</div>
+</section>
+<footer>
+	<div class="s-pad bottom">
+		<div class="content">
+			<p style="text-align:center">
+				James Detmer, Kiavash Page, Andrew Jiang<br><br>
+				<a href="http://paradata.io">Paradata.io</a>
+			</p>
+		</div>
+	</div>
+</footer>
+</main>
+
+
+
+
+</body> 
+</html>
