@@ -46,35 +46,26 @@ layout: default
 </main>
 
 <script>
-function init(img) { // defer image loading
-  for (var i=0; i<img.length; i++) {
-    if(img[i].getAttribute('data-src')) {
-      img[i].setAttribute('src',img[i].getAttribute('data-src'))
-      img[i].style.opacity = "1"
-    } 
-  } 
-}
+function tileAppear(){ // defer tile loading, motion
+  var tiles = document.getElementsByClassName("tile")
 
-function tileAppear(callback){
-
-  for(i = 0; i < document.getElementsByClassName("tile").length; i++){
+  for(i=0; i<tiles.length; i++){
     var anim = (0.05*i)+"s"
-    var elem = document.getElementsByClassName("tile")[i]
+    var elem = tiles[i]
+
+    elem.style.opacity = "0"
 
     elem.style["-webkit-animation-delay"] = anim
     elem.style["-moz-animation-delay"] = anim
     elem.style.animationDelay = anim
 
-    var img = elem.getElementsByTagName("img")[0]
-    if(img) {
-      img.setAttribute("data-src",img.getAttribute("src"))
-      img.setAttribute("src","")
-      img.style.opacity = "0"
-    }
   }
+  
+  for (var i=0; i<tiles.length; i++) {
+    var elem = tiles[i]
+    elem.style.opacity = "1"
+  } 
+}
 
-  callback(document.getElementsByTagName("img"))
-} 
-
-window.onLoad = tileAppear(init)
+window.onLoad = tileAppear()
 </script>
