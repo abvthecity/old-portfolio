@@ -6,13 +6,12 @@ layout: default
 
 <main>
   <section>
-    <div class="s-pad">
 {% if page.home != true %}
+    <div class="s-pad">
       <h1>{% if page.category.size > 1 %}<span style="color:#AAA"><a href="/{{ page.category[0] }}">{{ page.category[0] }}</a> / </span>{% endif %}{{page.title}}</h1>
-      </div>
-      <div class="s-pad bottom s-tile">
+    </div>
 {% endif %}
-
+    <div class="s-pad bottom s-tile">
 <ul class="tile_ul">
 {% if page.home == true %}<li class="tile nohov">
   <div onclick="javascript:window.open('/hello','_self');">
