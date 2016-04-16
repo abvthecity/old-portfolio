@@ -55,6 +55,8 @@ function tileAppear(){ // defer tile loading, motion
     var anim = "tileshift 0.8s cubic-bezier(0.215, 0.61, 0.355, 1)"
     var elem = tiles[i]
     
+    elem.style.opacity = "0"
+    
     elem.style["-webkit-animation"] = anim
     elem.style["-moz-animation"] = anim
     elem.style.animation = anim
@@ -63,9 +65,9 @@ function tileAppear(){ // defer tile loading, motion
     elem.style["-moz-animation-delay"] = (0.05*i)+"s"
     elem.style.animationDelay = (0.05*i)+"s"
     
-    elem.style["-webkit-animation-fill-mode"] = "foreward"
-    elem.style["-moz-animation-fill-mode"] = "foreward"
-    elem.style.animationFillMode = "foreward"
+    elem.style["-webkit-animation-fill-mode"] = "forewards"
+    elem.style["-moz-animation-fill-mode"] = "forewards"
+    elem.style.animationFillMode = "forewards"
   }
 }
 
