@@ -54,11 +54,6 @@ function tileAppear(){ // defer tile loading, motion
   for(i=0; i<tiles.length; i++){
     var anim = (0.05*i)+"s"
     var elem = tiles[i]
-    var animtype = "tileshift 0.8s cubic-bezier(0.215, 0.61, 0.355, 1)"
-    
-    elem.style["-webkit-animation"] = animtype
-    elem.style["-moz-animation"] = animtype
-    elem.style.animation = animtype
     
     elem.style["-webkit-animation-delay"] = anim
     elem.style["-moz-animation-delay"] = anim
