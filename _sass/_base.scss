@@ -19,14 +19,14 @@ img { border:none;max-width:100%;vertical-align:middle;margin:0 auto;padding:0;d
 table { border-collapse:collapse;border-spacing:0 }
 /* END Boilerplate */
 
-/*
+
 * {
     @include webkit(transition-property, (margin, padding, opacity, background-color, color, border));
     @include webkit(transition-duration, 0.35s);
     @include webkit(transition-timing-function, cubic-bezier(0.215, 0.61, 0.355, 1));
     @include webkit(animation-fill-mode, both);
 }
-*/
+
 
 ::selection { background:#e62f6f; color:#fff; text-shadow: none; }
 
