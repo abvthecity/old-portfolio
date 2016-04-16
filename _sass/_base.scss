@@ -353,6 +353,7 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
     float:left;
     top:0;
     position:relative;
+    opacity:0; // init
     @include webkit(animation, tileshift 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 1)
     @include webkit(animation-fill-mode, forewards);
     z-index:1;
