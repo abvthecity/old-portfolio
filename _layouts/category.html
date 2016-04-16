@@ -59,15 +59,6 @@ function tileAppear(){ // defer tile loading, motion
 
     elem.style.opacity = "0"
   }
-  
-  function delayLoad(){
-    for (var i=0; i<tiles.length; i++) {
-      var elem = tiles[i]
-      elem.style.opacity = "1"
-    } 
-  }
-  
-  window.setTimeout(delayLoad, 350);
 }
 
 window.onLoad = tileAppear()
