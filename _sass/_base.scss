@@ -353,7 +353,6 @@ section p.neg:after, footer p.neg:after {content:'';display:block;clear:both;}
     float:left;
     top:0;
     position:relative;
-    opacity:0;
     @include webkit(animation-fill-mode, forewards);
     z-index:1;
 
