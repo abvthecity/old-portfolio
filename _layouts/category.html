@@ -60,10 +60,14 @@ function tileAppear(){ // defer tile loading, motion
     elem.style.opacity = "0"
   }
   
-  for (var i=0; i<tiles.length; i++) {
-    var elem = tiles[i]
-    elem.style.opacity = "1"
-  } 
+  function delayLoad(){
+    for (var i=0; i<tiles.length; i++) {
+      var elem = tiles[i]
+      elem.style.opacity = "1"
+    } 
+  }
+  
+  window.setTimeout(delayLoad, 200);
 }
 
 window.onLoad = tileAppear()
