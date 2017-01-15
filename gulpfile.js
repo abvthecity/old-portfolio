@@ -104,9 +104,12 @@ gulp.task('scss', () => {
 gulp.task('css', () => {
   return gulp.src(paths.src + '/scss/**/*.scss')
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
+    .pipe(sourcemaps.write())
+    .pipe(concat('bundle.css'))
     .pipe(autoprefixer())
     .pipe(rename('styles.css'))
     .pipe(gulp.dest(paths.build + '/css'));
