@@ -134,5 +134,9 @@ gulp.task('clean', function () {
       .pipe(clean());
 });
 
+gulp.task('apply-prod-environment', function() {
+    process.env.NODE_ENV = 'production';
+});
+
 gulp.task('default', ['bundle']);  // development
-gulp.task('deploy', ['html', 'css', 'jsmin', 'images']);  // production
+gulp.task('deploy', ['apply-prod-environment', 'html', 'css', 'jsmin', 'images']);  // production
