@@ -1,0 +1,155 @@
+@import 'normalize';
+@import 'boilerplate';
+
+$break-small: 1024px;
+
+html, body {
+  overflow: hidden;
+}
+
+#landing, #gallery {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,E0E0E0+100 */
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #E0E0E0 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#E0E0E0 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ffffff 0%,#E0E0E0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#E0E0E0',GradientType=0 ); /* IE6-9 */
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    line-height: 20px;
+    user-select: none;
+    cursor: pointer;
+
+    i {
+      vertical-align: sub;
+    }
+  }
+
+  nav {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    user-select: none;
+    z-index: 1000;
+
+    a {
+      margin-left: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      &:hover {
+        background-color: #FFFBCC;
+      }
+    }
+  }
+
+  .gallery-heading {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  overflow-y: auto;
+}
+
+.cards-container {
+  margin: 150px 2.5%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-stack-container, .card-single-container {
+  position: relative;
+  z-index: 1;
+
+  perspective: 1000px;
+  perspective-origin: center;
+
+  .card-container-label {
+    position: absolute;
+    margin-top: -24px;
+    width: 100%;
+    text-align: center;
+    z-index: 0;
+    user-select: none;
+    cursor: default;
+
+    .card-name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .card-sub {
+      font-size: 14px;
+    }
+  }
+
+  .card-stack, .card-single {
+    padding: 0;
+    margin: 32px 16px;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+    width: 256px;
+    height: 409px;
+
+    @media screen and (max-width: $break-small) {
+      width: 200px;
+      height: 320px;
+    }
+
+    transform-style: preserve-3d;
+    transform-origin: center;
+
+    .card {
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      list-style: none;
+      position: absolute;
+      overflow: hidden;
+      border-radius: 8px;
+      user-select: none;
+      cursor: inherit;
+      box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.3);
+      transition: box-shadow .15s ease-in-out;
+
+      .card-img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &.picked-up {
+    z-index: 100 !important;
+
+    .card {
+      box-shadow: 0 5px 50px 0px  rgba(0, 0, 0, 0.3);
+    }
+  }
+
+}

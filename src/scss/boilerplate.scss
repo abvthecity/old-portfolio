@@ -1,0 +1,47 @@
+$font-family: "Proxima Nova", "proxima-nova", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, Avenir, Verdana, Sans-serif;
+$font-size:   13px;
+$line-height: 1.4em;
+$text-color: #000;
+$bg-color: #FFF;
+
+html {
+  box-sizing: border-box;
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: 400;
+  color: $text-color;
+
+  background-color: $bg-color;
+  background-attachment: fixed;
+  background-size: cover;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0; margin: 0;
+}
+
+a, a:hover, a:active {
+  color: inherit;
+}
+
+input, textarea {
+  outline: none;
+}
