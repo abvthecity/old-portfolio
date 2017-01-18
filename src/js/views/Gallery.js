@@ -41,7 +41,7 @@ class Gallery extends Component {
       this.setState({
         name: 'Photo',
         cards: [
-          {img: 'vsco.jpg', name: 'VSCO x Abvthecity', sub: 'Continuous', url: 'http://vsco.co/ninjiangstar/'},
+          {img: 'vsco.jpg', name: 'VSCO x Abvthecity', sub: 'Continuous', url: 'http://vsco.co/abvthecity/'},
           {img: 'china.jpg', name: 'China', sub: 'Summer 2015', url: 'https://goo.gl/photos/txvgTAVXhbXjbspe8'}
         ], collapsed: false
       });
